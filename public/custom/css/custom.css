@@ -1,0 +1,99 @@
+  .title-custom {
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+  .input-custom {
+  border: 1px solid #0581b3;
+  height: 33px;
+  color: black;
+  font-size: 15px;
+  background: #F2FCFD;
+  border-radius: 8px 8px 8px 8px;
+}
+
+  
+/* Booking Confirmation Page
+------------------------------------- */
+.order-confirmation-page {
+  text-align: center;
+  padding-bottom: 120px;
+  padding-top: 0px;
+}
+
+.order-confirmation-page h2 {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 25px;
+  display: block;
+}
+
+.order-confirmation-page p {
+  font-size: 20px;
+  color: #808080;
+  font-weight: 300;
+  display: block;
+  line-height: 32px;
+}
+
+.order-confirmation-page a.button:before { display: none; }
+.order-confirmation-page a.button {
+  background-color: #eee;
+  color: #606060;
+  font-weight: 600;
+  font-size: 18px;
+  box-shadow: none;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.order-confirmation-page a.button i { font-size: 24px; }
+
+.book-now.button { padding: 9px; margin-bottom: -4px; }
+
+.breathing-icon {
+  background-color: #00e600;
+  width: 120px;
+  height: 120px;
+  line-height: 0;
+  font-size: 18px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 30px;
+  position: relative;
+  z-index: 100;
+  transition: 0.4s;
+  color: #fff;
+  font-weight: 500;
+  animation: bicokAnim 3s infinite;
+  box-shadow: 0 0 0 15px rgba(102,103,107,0.07);
+  margin-bottom: 70px;
+  font-size: 90px;
+}
+
+.breathing-icon i {
+  color: #fff;
+  position: absolute;
+  top: 53%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+@keyframes bicokAnim {
+  0%,100% {
+    box-shadow: 0 0 0 15px #e6ffe6;
+  }
+  50% {
+    box-shadow: 0 0 0 28px #f2f2f2;
+  }
+}
+
+@media (max-width: 991px) {
+  .order-confirmation-page i { font-size: 100px; }
+  .order-confirmation-page p { font-size: 18px; }
+  .order-confirmation-page h2 { font-size: 30px; }
+}

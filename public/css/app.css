@@ -1,0 +1,221 @@
+/* @import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities'; */
+
+.content {
+  border-radius: 30px;
+  padding: 0px 22px;
+  min-width: 0;
+  min-height: 100vh;
+  --bg-opacity: 1;
+  background-color: #F1F5F8;
+  background-color: rgba(241, 245, 248, var(--bg-opacity));
+  flex: 1 1 0%;
+  padding-bottom: 2.5rem;
+}
+
+@media (max-width: 767px) {
+  .content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 100%;
+  }
+}
+
+.content:before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  display: block;
+}
+
+.dark .content {
+  --bg-opacity: 1;
+  background-color: #293145;
+  background-color: rgba(41, 49, 69, var(--bg-opacity));
+}
+
+.inputtable {
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
+  border-radius: 0.8rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.inputtable:not(textarea).inputtable--sm {
+  padding-top: 0.05rem;
+  padding-bottom: 0.05rem;
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
+}
+
+.inputtable:not(textarea).inputtable--lg {
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.inputtable:focus {
+  outline: 1px solid transparent;
+  outline-offset: 1px;
+  box-shadow: 0 0 0 3px rgba(118, 169, 250, 0.45);
+}
+
+.title-custom {
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.input-custom {
+  border: 1px solid #0581b3;
+  height: 33px;
+  color: black;
+  font-size: 15px;
+  background: #F2FCFD;
+  border-radius: 8px 8px 8px 8px;
+}
+
+/* Booking Confirmation Page
+------------------------------------- */
+
+.order-confirmation-page {
+  text-align: center;
+  padding-bottom: 120px;
+  padding-top: 0px;
+}
+
+.order-confirmation-page h2 {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 25px;
+  display: block;
+}
+
+.order-confirmation-page p {
+  font-size: 20px;
+  color: #808080;
+  font-weight: 300;
+  display: block;
+  line-height: 32px;
+}
+
+.order-confirmation-page a.button:before { display: none;
+}
+
+.order-confirmation-page a.button {
+  background-color: #eee;
+  color: #606060;
+  font-weight: 600;
+  font-size: 18px;
+  box-shadow: none;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.order-confirmation-page a.button i { font-size: 24px;
+}
+
+.book-now.button { padding: 9px; margin-bottom: -4px;
+}
+
+.breathing-icon {
+  background-color: #00e600;
+  width: 120px;
+  height: 120px;
+  line-height: 0;
+  font-size: 18px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 30px;
+  position: relative;
+  z-index: 100;
+  transition: 0.4s;
+  color: #fff;
+  font-weight: 500;
+  -webkit-animation: bicokAnim 3s infinite;
+          animation: bicokAnim 3s infinite;
+  box-shadow: 0 0 0 15px rgba(102,103,107,0.07);
+  margin-bottom: 70px;
+  font-size: 90px;
+}
+
+.breathing-icon i {
+  color: #fff;
+  position: absolute;
+  top: 53%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+@-webkit-keyframes bicokAnim {
+  0%,100% {
+    box-shadow: 0 0 0 15px #e6ffe6;
+  }
+
+  50% {
+    box-shadow: 0 0 0 28px #f2f2f2;
+  }
+}
+
+@keyframes bicokAnim {
+  0%,100% {
+    box-shadow: 0 0 0 15px #e6ffe6;
+  }
+
+  50% {
+    box-shadow: 0 0 0 28px #f2f2f2;
+  }
+}
+
+@media (max-width: 991px) {
+  .order-confirmation-page i { font-size: 100px;
+  }
+
+  .order-confirmation-page p { font-size: 18px;
+  }
+
+  .order-confirmation-page h2 { font-size: 30px;
+  }
+}
+
+.upddown-box {
+  z-index: 9999;
+  transition: visibility 0s linear 0.2s, opacity 0.2s 0s;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+}
+
+.upddown-box.show {
+  transition: visibility 0s linear 0s, opacity 0.2s 0s;
+  visibility: visible;
+  opacity: 1;
+}
+
+.upddown-box.show > .upddown-box__content {
+  margin-top: 0.25rem;
+}
+
+.upddown-box.show > .upddown-box__content .tab-content .tab-content__pane {
+  visibility: visible;
+}
+
+.upddown-box .upddown-box__content {
+  transition: margin-top 0.2s;
+  margin-top: 1.25rem;
+}
+
+.upddown-box .upddown-box__content .tab-content .tab-content__pane {
+  visibility: hidden;
+}
+
