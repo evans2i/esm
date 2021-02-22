@@ -12,6 +12,9 @@
         "heroku-prebuild": "export NPM_CONFIG_PRODUCTION=false; export NODE_ENV=; NPM_CONFIG_PRODUCTION=false NODE_ENV=development npm install --only=dev --dev",
         "heroku-postbuild": "npm run prod"
     },
+    "engines": {
+        "node": "12.16.1"
+    },
     "dependencies": {
         "@ckeditor/ckeditor5-basic-styles": "^21.0.0",
         "@ckeditor/ckeditor5-dev-utils": "^23.1.1",
