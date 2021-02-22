@@ -421,6 +421,12 @@
                     <div class="top-menu__title">Assignments</div>
                 </inertia-link>
             </li>
+            <li>
+                <inertia-link href="/accademic/examResult"  class="top-menu" >
+                    <div class="top-menu__icon"> <i class="feather icon-user"></i></div>
+                    <div class="top-menu__title"> Result Examination </div>
+                </inertia-link>
+            </li>
         </template>
 
         <template v-if="$role.IsStudent()">

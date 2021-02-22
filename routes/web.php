@@ -87,7 +87,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', '\App\Http\Co
             Route::apiresource('/assignments', '\App\Http\Controllers\Accademic\AssignmentController');
             Route::get('/loadSubjectForStaff/{staffId}/{semester}', '\App\Http\Controllers\Accademic\AssignmentController@loadSubjectForStaff' );
             Route::get('/loadSubjectForStaffCurrent/{semester}', '\App\Http\Controllers\Accademic\AssignmentController@loadSubjectForStaffCurrent' );
-
+            Route::post('/findAssignment', '\App\Http\Controllers\Accademic\AssignmentController@findAssignment' );
         });
 
         Route::group(['prefix' => 'student'], function() {

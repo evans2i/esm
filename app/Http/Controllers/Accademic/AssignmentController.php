@@ -125,4 +125,22 @@ class AssignmentController extends Controller
         $van = SubjectResource::collection($semesters->subjects->whereIn('id',$subId));
         return response()->json($van);
     }
+
+    public function findAssignment(Request $request)
+    {
+        $vans['error'] = false;
+        
+        $van = Assignment::where('subject_id',$request->subject_id)
+                        ->where('faculty_id',$request->faculty_id)
+                        ->where('semester_id',$request->semester_id)
+                        ->where('subject_id',$request->subject_id)
+                        ->orderBy('id', 'desc')->get();
+        if($van->isEmpty()){
+            $vans['error'] = true;
+            $vans['message'] = "Sorry No Any Assignment have Been Created in this Year Selected";
+        }else{
+            $vans['subj'] = AssigmentResource::collection($van);
+        }
+        return response()->json($vans);
+    }
 }

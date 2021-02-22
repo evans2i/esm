@@ -27,7 +27,6 @@
                                 <option value="" disabled selected>Select Batches</option>
                                 <option v-for="(batch,ind) in batchs" :key="ind" :value="batch.id">{{ batch.title }}</option>
                             </select>
-
                         </td>
                         <td class="border-b dark:border-dark-5"><search-button  @searchbtn="findExamResult()" >Search</search-button></td>
                     </tr>
@@ -87,9 +86,7 @@
                         let data = this.students;
                         let holder = [];
                         data.forEach(el => {
-                            if (el.batch === batch) {
-                                holder.push(el);
-                            }
+                            if (el.batch === batch) { holder.push(el); }
                         });
                         this.students = holder;
                     }else{

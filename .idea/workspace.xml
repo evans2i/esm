@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="346f7753-0686-4005-9bb5-7aeb49229b49" name="Default Changelist" comment="" />
+    <list default="true" id="346f7753-0686-4005-9bb5-7aeb49229b49" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/Accademic/AssignmentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/Accademic/AssignmentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/Accademic/ExamMarkLedgerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/Accademic/ExamMarkLedgerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Http/Resources/ExamMarkResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Resources/ExamMarkResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/../public/dist/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/illustration.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../public/dist/images/illustration.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/Customers/FetchExam.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/Customers/FetchExam.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/Layouts/Navigtions/Links.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/Layouts/Navigtions/Links.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/Mixins/tableCaseMixin.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/Mixins/tableCaseMixin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/MyComponent/Exams/ResultExam.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/MyComponent/Exams/ResultExam.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/Pages/Academic/ExamResult.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/Pages/Academic/StudentsResult.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/Pages/Assigment/Assignment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/Pages/Assigment/Assignment.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/Pages/Assigment/Component/AddAssignment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/Pages/Assigment/Component/AddAssignment.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/Pages/Assigment/Component/AssigmentTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/Pages/Assigment/Component/AssigmentTable.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/Pages/Assigment/Reusable/FetchAssignment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/Pages/Assigment/Reusable/FetchAssignment.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/../routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +37,9 @@
         <option value="Vue Single File Component" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -144,6 +165,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1jEwsXLOxLUuD0QjivQgnaBFUEn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -158,11 +180,11 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Bulma\myapp\resources\js\Pages\Hostels" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\Bulma\myapp\public\organization" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Bulma\myapp\resources\js\Pages\Hostels" />
     </key>
   </component>
   <component name="RunManager">
@@ -231,6 +253,9 @@
       <workItem from="1613540310504" duration="16368000" />
       <workItem from="1613557817343" duration="20458000" />
       <workItem from="1613623896952" duration="17309000" />
+      <workItem from="1613798992763" duration="24035000" />
+      <workItem from="1613888709392" duration="2874000" />
+      <workItem from="1613971939367" duration="1170000" />
     </task>
     <servers />
   </component>
@@ -242,18 +267,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="395" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1611919149051" />
-    <state x="413" y="120" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1613573305851">
+    <state x="413" y="120" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1613824031728">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="120" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1613573305851" />
+    <state x="413" y="120" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1613824031728" />
     <state x="398" y="227" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1613573217569">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="398" y="227" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728@0.0.1366.728" timestamp="1613573217569" />
-    <state x="438" y="179" key="NewPhpClassDialog" timestamp="1613573255002">
+    <state x="438" y="179" key="NewPhpClassDialog" timestamp="1613823938316">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="438" y="179" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1613573255002" />
+    <state x="438" y="179" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1613823938316" />
     <state x="517" y="288" key="NewPhpFileDialog" timestamp="1611906580243">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -262,21 +287,21 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1606734334790" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1613203638731">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1613827325016">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1613203638731" />
-    <state x="6" y="182" key="com.intellij.ide.util.TipDialog" timestamp="1613623925051">
+    <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1613827325016" />
+    <state x="6" y="182" key="com.intellij.ide.util.TipDialog" timestamp="1613973288938">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="6" y="182" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1613623925051" />
+    <state x="6" y="182" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1613973288938" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1612189123425">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1612189123425" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1613643325934">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1613829361182">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1613643325934" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1613829361182" />
   </component>
 </project>

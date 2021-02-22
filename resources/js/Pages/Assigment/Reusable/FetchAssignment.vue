@@ -9,7 +9,7 @@
                 </select>
             </div>
             <div class="mt-6 lg:mt-0 relative flex-1 flex items-center px-5 border-t lg:border-0 border-gray-200 dark:border-dark-5 lg:pt-0">
-                <label>Hostels </label>
+                <label>Faculty</label>
                 <select class="input w-full border" v-model="form.faculty_id" @change="selectFaculty()" >
                     <option value="" selected>Select Faculty</option>
                     <option v-for="faculty in faculties" :value="faculty.id" :key="faculty.id" >{{ faculty.faculty}}</option>
@@ -125,7 +125,7 @@
 
             },
             fetchingData(){
-                this.fetch(this.form);
+                this.fetch({whereto:this.whereto ,form:this.form});
             }
         },
     }

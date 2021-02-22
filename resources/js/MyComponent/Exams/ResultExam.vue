@@ -4,47 +4,60 @@
             <fetching-exam :vans="vans"></fetching-exam>
         </div>
         <div class="intro-y flex flex-col sm:flex-row items-center mt-0 lg:mt-5  sm:mt-3 mt-5">
-            <h2 class="text-lg font-medium mr-auto">
-            </h2>
-            <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
-                <button @click="printableFullDetail('printablefull')" class="button text-white shadow-md mr-2 bg-purple-400" >Print Data</button>
-            </div>
+            <h2 class="text-lg font-medium mr-auto"> Result For All Student In Semister</h2>
         </div>
         <div>
 <!--            <loading-spinner v-if="Object.keys(studentData).length === 0">Fetching</loading-spinner>-->
         </div>
 <!--        v-if="Object.keys(studentData).length != 0"-->
         <div>
-            <div class="grid grid-cols-1 gap-1 gap-1 lg:mt-5" id="printablefull" >
+            <div class="grid grid-cols-1 gap-1 gap-1 lg:mt-5">
                 <div class="intro-y box px-5 pt-5" v-for="(student,index) in students" :key="index" >
                     <div class="preview">
-                        <div class="flex flex-col lg:flex-row border-b border-gray-200 dark:border-dark-5 pb-5 -mx-5 w-full">
+                        <div class="intro-y flex flex-col sm:flex-row items-center mt-0 lg:mt-5  sm:mt-3 mt-5">
+                            <h2 class="text-lg font-medium mr-auto">
+                            </h2>
+                            <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
+                                <button @click="printableFullDetail(`printablefull-${index}`)" class="button button--sm w-24 mr-1 mb-2 border text-gray-700 text-white shadow-md mr-2 bg-purple-400" >Print Data</button>
+                            </div>
+                        </div>
+                        <div :id="`printablefull-${index}`"  class="flex flex-col lg:flex-row border-b border-gray-200 dark:border-dark-5 pb-5 -mx-5 w-full">
+
                             <table class="table table--sm">
                                 <thead>
                                     <tr>
-                                        <th class="border-b dark:border-dark-5">Subjects</th>
-                                        <th class="border-b-2 dark:border-dark-5 whitespace-no-wrap" :colspan="exams.length" >Examination</th>
-                                        <th class="border-b dark:border-dark-5">Total</th>
-                                        <th class="border-b dark:border-dark-5"> Avarage </th>
-                                        <th class="border-b dark:border-dark-5"> Position </th>
+                                        <th colspan="7" class=" border border-b text-center dark:border-dark-5">{{student.name}}</th>
                                     </tr>
                                     <tr>
-                                        <th class="border-b dark:border-dark-5">Subjects</th>
-                                        <th class="border-b-2 dark:border-dark-5" v-for="(exam,index) in exams" :key="exam.id" >{{exam.title}}</th>
-                                        <th class="border-b dark:border-dark-5">Total</th>
-                                        <th class="border-b dark:border-dark-5"> Avarage </th>
-                                        <th class="border-b dark:border-dark-5"> Position </th>
+                                        <th colspan="3" class="border border-b text-center dark:border-dark-5">{{student.reg_no}}</th>
+                                        <th colspan="2" class="border border-b text-center dark:border-dark-5">Current Class: {{student.faculty}}</th>
+                                        <th colspan="2" class="border border-b text-center dark:border-dark-5">Current Class: {{student.semester}}</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="border border-b dark:border-dark-5">Subjects</th>
+                                        <th class="border border-b-2 dark:border-dark-5 whitespace-no-wrap" :colspan="2*(Object.keys(exams).length)" >Examination</th>
+                                        <th class="border border-b dark:border-dark-5">Total</th>
+                                        <th class="border border-b dark:border-dark-5"> Avarage </th>
+                                    </tr>
+                                    <tr>
+                                        <th class="border border-b dark:border-dark-5">Subjects</th>
+                                        <th class="border border-b-2 dark:border-dark-5" :colspan="Object.keys(exams).length" v-for="(exam,index) in exams" :key="exam.id" >{{exam.title}}</th>
+                                        <th class="border border-b dark:border-dark-5">Total</th>
+                                        <th class="border border-b dark:border-dark-5"> Avarage </th>
                                     </tr>
                                 </thead>
 <!--                                v-for="(feeD ,index) in studentMaster" :key="index"-->
                                 <tbody>
-                                    <tr class="border-b bg-theme-6 text-white" v-for="subject in subjects" :key="subject.id" >
-                                        <td class="border-b dark:border-dark-5">{{subject.title}}</td>
-                                        <td class="border-b dark:border-dark-5 " v-for="(exam,index) in exams" :key="exam.id"> {{ chopingMarkData(student.id,subject.id, exam.id) }} </td>
-                                        <td class="border-b dark:border-dark-5" v-for="(exam,index) in exams" :key="exam.id"> {{ chopingMarkData(student.id,subject.id, exam.id) }} </td>
-                                        <td class="border-b dark:border-dark-5"></td>
-                                        <td class="border-b dark:border-dark-5 "> </td>
-                                    </tr>
+                                <tr class="hover:bg-gray-200" v-for="subject in subjects">
+                                    <td class="border" >{{subject.title }}</td>
+                                    <template v-for="(exam) in exams">
+                                        <td class="border" >{{chopingMarkData(student.student_id,subject.id,exam.id,"theory")}}</td>
+                                        <td class="border" >{{chopingMarkData(student.student_id,subject.id,exam.id,"practical")}}</td>
+                                    </template>
+
+                                    <td class="border" >{{findTotal(student.student_id,subject.id)}}</td>
+                                    <td class="border" >{{findTotal(student.student_id,subject.id)/( Object.keys(exams).length)}}</td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -55,12 +68,12 @@
         </div >
 
 
-<!--        <modal name="super-large" height="auto" width="40%" >-->
-<!--            <collect-fee :payFee="payFee" :urls="urls" :pagetitle="pagetitle"></collect-fee>-->
-<!--        </modal>-->
+<!--        <modal name="super-large" height="auto" width="40%" >   -->
+<!--            <collect-fee :payFee="payFee" :urls="urls" :pagetitle="pagetitle"></collect-fee>    -->
+<!--        </modal>    -->
 <!--        <modal name="super-large-show" height="auto" width="78%" >-->
-<!--            <show-collect :payFee="showFee" :urls="urls" :pagetitle="pagetitle"></show-collect>-->
-<!--        </modal>-->
+<!--            <show-collect :payFee="showFee" :urls="urls" :pagetitle="pagetitle"></show-collect> -->
+<!--        </modal>    -->
     </div>
 </template>
 
@@ -101,10 +114,6 @@
             },
             search: _.debounce((loading, search, vm) => {
                 axios.get(`/users/students/findStudentDetails/${search}`)
-                    // fetch(
-                    //     `https://api.github.com/search/repositories?q=${escape(search)}`
-                    //     // `https://api.github.com/search/repositories?q=${escape(search)}`
-                    // )
                     .then(res => {
                         vm.students = res.data;
                         loading(false);
@@ -112,15 +121,32 @@
             }, 350),
 
 
-            chopingMarkData(std,subj,exam){
+            chopingMarkData(std,subj,exam,type){
                 let mark=0;
                 let arry = this.marks;
                 arry.forEach((ele)=>{
-                    if(ele.student_id == std && ele.subject_id == subj && ele.exam_id == exam ){
-                        mark =eval(eval(mark) +eval(ele.obtained));
+                    if(ele.student_id == std && ele.subject_id == subj && ele.exam_id == exam){
+                        if (type == "theory"){
+                            mark = ele.obtain_mark_theory? ele.obtain_mark_theory: 0;
+                        }else if(type == "practical"){
+                            mark = ele.obtain_mark_practical? ele.obtain_mark_practical: 0;
+                        }else{
+                            mark = 0;
+                        }
                     }
                 })
                 return mark
+            },
+
+            findTotal(std,subj){
+                let merk = 0;
+                let marks = this.marks;
+                marks.forEach((ele)=>{
+                    if (ele.student_id == std &&  ele.subject_id == subj){
+                        merk += (eval(ele.obtain_mark_theory) + eval(ele.obtain_mark_practical))
+                    }
+                });
+                return merk;
             },
 
 
@@ -129,7 +155,9 @@
                 this.marks = results.marks;
                 this.students = results.students;
                 this.exams = results.exams;
+                console.log(this.exams.length);
             },
+
 
             printableFullDetail(printable){
                 let contents = document.getElementById(`${printable}`).innerHTML;

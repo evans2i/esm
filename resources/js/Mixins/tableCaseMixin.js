@@ -31,7 +31,7 @@ export default {
             this.initNo = (value-this.dividerData);
             this.currentNo = value;
         },
-        
+
         searchFilterData(data){
             this.angs = data;
             appBus.fire('data-search-show',this.dividerData);
@@ -42,7 +42,6 @@ export default {
             let searchQuery= event.target.value;
             let searchStr = searchQuery.toLowerCase();
 
-            console.log(searchQuery);
             this.currentData=[];
             let m =false;
             arrData.forEach(obj => {
@@ -109,7 +108,7 @@ export default {
                 this.valueTwo=value;
                 this.valueThree=value + 1;
             }
-            
+
         },
 
         moveFirstToThird(){
@@ -143,13 +142,13 @@ export default {
                         this.valueOne=lookLast-2;
                         this.valueTwo=lookLast-1;
                         this.valueThree=lookLast;
-                        
+
                     }
                      else {
                         this.valueOne=dataNow-1;
                         this.valueTwo=dataNow;
                         this.valueThree=dataNow+1;
-                        
+
                     }
                 }else {
                     this.valueOne=1;
@@ -175,7 +174,7 @@ export default {
                 nowDa = Math.ceil( this.valueOne * this.dividerData);
             }
             appBus.fire('paginated',nowDa);
-                
+
         },
 
     },
@@ -185,16 +184,16 @@ export default {
         //     return this.angs.slice(this.initdivider,this.dividerData);
         // }
 
-        isValueOne(){ 
+        isValueOne(){
             this.last = Math.ceil(this.findingLength/this.dividerData)
-            
-            if(this.valueOne === 1 &&  this.last <=2){ 
+
+            if(this.valueOne === 1 &&  this.last <=2){
                 return false;
             }
-            return true; 
+            return true;
           },
 
-        
+
     },
 
     created() {
@@ -203,6 +202,6 @@ export default {
         //         this.valueTwo=2;
         //         this.valueThree=3;
         //     appBus.fire('paginated',datadiv);
-        // });  
+        // });
     },
 }

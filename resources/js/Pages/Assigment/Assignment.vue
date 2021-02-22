@@ -10,17 +10,14 @@
         <div class="py-12">
             <total-button :headerDetail="headerDetail"></total-button>
 
-            <fetch-assignment
-                :faculties="vans.faculty.data"
+            <assigment-table :ans="angs"  :urls="urls" v-if="!toggleview"></assigment-table>
+
+            <add-assigment :faculties="vans.faculty.data"
                 :staffs="vans.staff.data"
                 :years="vans.year.data"
                 :urls="urls"
                 :fetch="fetchstaffData"
-                whereto="fetching">
-
-            </fetch-assignment>
-
-            <assigment-table :angss="angs" :urls="urls" v-if="!toggleview"></assigment-table>
+                :whereto="whereto" v-if="toggleview && !$role.IsSuperadministrator()"></add-assigment>
         </div>
     </app-master>
 </template>
@@ -32,6 +29,7 @@
     import AppMaster from "@/Layouts/AppMaster";
     import FetchAssignment from "@/Pages/Assigment/Reusable/FetchAssignment";
     import AssigmentTable from "@/Pages/Assigment/Component/AssigmentTable";
+    import AddAssignment from "@/Pages/Assigment/Component/AddAssignment";
     export default {
         props:{
             vans:{
@@ -50,16 +48,13 @@
         components:{
             AssigmentTable,
             FetchAssignment,
+            AddAssignment,
             AppMaster,
             TotalButton
         },
         name: "Assignment",
         data() {
             return {
-
-                angs:this.vans.assigns.data,
-                vangs:this.vans.assigns.data,
-
                 toggleview: false,
 
                 headerDetail: {
@@ -95,16 +90,13 @@
             }
         },
         methods: {
-            fetchstaffData(data){
-                axios.post(`/assignment/findAssignment`,data).then((res)=>{
-                    this.angs = res.data;
-                    this.vangs = res.data;
-                })
-            },
+
             togglerToFalse() {
+                this.whereto = "feaching";
                 this.toggleview = false;
             },
             togglerToTrue() {
+                this.whereto = "adding";
                 this.toggleview = true;
             }
         },

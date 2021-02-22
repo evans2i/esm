@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers\Accademic;
 
+use App\Http\Resources\ExamMarkResource;
+use App\Http\Resources\Marks\MarkResource;
+use App\Http\Resources\Marks\StudentForResultResource;
 use App\Http\Resources\SubjectResource;
+use App\Http\Resources\Users\StudentDetailResource;
 use App\Models\Exam;
 use App\Models\Semester;
 use App\Models\Year;
@@ -231,7 +235,7 @@ class ExamMarkLedgerController extends Controller
     {
         $vans['years'] = TitleResource::collection(Year::orderBy('id', 'desc')->take(5)->get());
         $vans['faculties'] = FacultyResource::collection(Faculty::orderBy('id', 'desc')->Active()->get());
-        return Inertia::render('Academic/ExamResult', ['vans'=>$vans,'urls'=>"examResult", 'pagetitle'=>"Examination Result"]);
+        return Inertia::render('Academic/StudentsResult', ['vans'=>$vans,'urls'=>"examResult", 'pagetitle'=>"Examination Result"]);
     }
 
     public function findExamResult($year = null, $faculty = null, $semester = null)
@@ -240,14 +244,34 @@ class ExamMarkLedgerController extends Controller
         $examScheduleId = ExamSchedule::where($examScheduleCondition)->get()->pluck('id');
          $semester = Semester::find($semester);
         $response['subjects'] = SubjectResource::collection($semester->subjects);
-        $response['marks'] = MarkStudentResource::collection(ExamMarkLedger::whereIn('exam_schedule_id',$examScheduleId)->get());
-//        $exams = ExamMarkLedger::whereIn('exam_schedule_id',$examScheduleId)->get();
-        $response['exams']= ExamMarkLedger::with('examSchedule')
-                                            ->whereIn('exam_schedule_id',$examScheduleId)->groupBy('exam_schedule_id')->get()
-                                            ->pluck('examSchedule');
-        dd($response['exams']);
-
-        $response['students'] = MarkStudentResource::collection(ExamMarkLedger::whereIn('exam_schedule_id',$examScheduleId)->groupBy('student_id')->get());
+        $response['marks'] = MarkResource::collection(ExamMarkLedger::with('examSchedule')->whereIn('exam_schedule_id',$examScheduleId)->get());
+        $response['exams']= ExamMarkLedger::with('examSchedule.exam')
+                                            ->whereHas('examSchedule.exam',function ($q){
+                                                $q->groupBy('id');})
+                                            ->groupBy('exam_schedule_id')->get()
+                                            ->pluck('examSchedule.exam')->unique('id');
+//        $stud = ExamMarkLedger::whereIn('exam_schedule_id',$examScheduleId)->groupBy('student_id')->get();
+//        $stdID = [];
+//        if ($stud){
+//            $stdID = $stud->pluck('student_id');
+//            $response['students'] = StudentDetailResource::collection(Student::whereIn('id',$stdID)->get());
+//        }
+        $response['students'] = StudentForResultResource::collection(ExamMarkLedger::whereIn('exam_schedule_id',$examScheduleId)->groupBy('student_id')->get());
         return response()->json($response);
     }
+
+//    public function findSingleExamResult($year = null, $faculty = null, $semester = null, $exam = null)
+//    {
+//        $examScheduleCondition = [ ['years_id', '=', $year], ['faculty_id', '=', $faculty],['semesters_id', '=', $semester],['exams_id', '=', $exam]];
+//        $examScheduleId = ExamSchedule::where($examScheduleCondition)->get()->pluck('id');
+//        $semester = Semester::find($semester);
+//        $response['subjects'] = SubjectResource::collection($semester->subjects);
+//        $response['marks'] = MarkStudentResource::collection(ExamMarkLedger::whereIn('exam_schedule_id',$examScheduleId)->get());
+//        $response['exams']= ExamMarkLedger::with('examSchedule')
+//            ->whereIn('exam_schedule_id',$examScheduleId)
+//            ->groupBy('exam_schedule_id')->get();
+//        dd($response['exams']);
+//        $response['students'] = MarkStudentResource::collection(ExamMarkLedger::whereIn('exam_schedule_id',$examScheduleId)->groupBy('student_id')->get());
+//        return response()->json($response);
+//    }
 }

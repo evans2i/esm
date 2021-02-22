@@ -1,8 +1,8 @@
 <template>
     <div class="grid grid-cols-1 gap-1" >
-        <!-- BEGIN: Daily Sales -->
         <div class="intro-y box lg:mt-5">
             <div class="overflow-x-auto">
+
                 <div class="intro-y col-span-12 flex flex-wrap sm:flex-no-wrap items-center mt-2">
                     <a></a>
                     <div class="w-full sm:w-auto mt-3 sm:mt-0 sm:ml-auto md:ml-0">
@@ -13,36 +13,21 @@
                     </div>
                 </div>
 
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th class="border border-b-2 dark:border-dark-5 whitespace-no-wrap">No</th>
-                        <th class="border border-b-2 dark:border-dark-5 whitespace-no-wrap">Faculty</th>
-                        <th class="border border-b-2 dark:border-dark-5 whitespace-no-wrap"> Semester </th>
-                        <th class="border border-b-2 dark:border-dark-5 whitespace-no-wrap">Subject </th>
-                        <th class="border border-b-2 dark:border-dark-5 whitespace-no-wrap">Title </th>
-                        <th class="border border-b-2 dark:border-dark-5 whitespace-no-wrap">Date </th>
-                        <th class="border border-b-2 dark:border-dark-5  whitespace-no-wrap">Actions</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr class="hover:bg-gray-200" v-for="(van,index) in dataDisplaying" :key="index">
-                        <td class="border" >{{index+1 }}</td>
-                        <td class="border" >{{ van.faculty }}</td>
-                        <td class="border" >{{ van.semester }}</td>
-                        <td class="border" >{{ van.subject }}</td>
-                        <td class="border"  >{{ van.title}}</td>
-                        <td class="border" >{{ van.publish_date }} To {{ van.end_date }}</td>
-                        <td class="border flex items-center">
-                            <edit-link  @editlink="actionEdit(index,van)" > </edit-link>
-                            <delete-link @deletelink="actionDelete(index,van)"> </delete-link>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
+                <div class="p-5 border border-b-3 tns-item" v-for="(van,index) in dataDisplaying" :key="index" id="important-notes-item1" aria-hidden="true" tabindex="-1">
+                    <div class="font-medium truncate">{{ van.title}}</div>
+                    <div class="font-medium truncate">{{ van.subject}}</div>
+                    <div class="text-gray-500 mt-1">Statring: {{ van.publish_date | myDateF}}  End {{ van.end_date | myDateF }} </div>
+                    <div class="text-gray-600 text-justify mt-1">{{ van.description}}</div>
+                    <div class="font-medium flex mt-5">
+                        <button type="button" class="button button--sm bg-gray-200 dark:bg-dark-5 text-gray-600 dark:text-gray-300">View Student Answers</button>
+                        <button type="button" class="button button--sm border border-gray-300 dark:border-dark-5 text-gray-600 ml-auto">ReAssign</button>
+                        <edit-link  @editlink="actionEdit(index,van)" > Edit</edit-link>
+                        <delete-link @deletelink="actionDelete(index,van)"> Delete</delete-link>
+                    </div>
+                </div>
+
                 <div class="intro-y  flex flex-wrap sm:flex-row sm:flex-no-wrap items-center mt-3" >
                     <!-- <table-pagination :totalData="findingLength" :dividerData="dividerData"></table-pagination> -->
-
                     <ul class="pagination items-center " v-if="last => 1">
                         <li v-show="isValueOne">
                             <a class="pagination__link" href="javascript:;" @click.prevent="changeFunctionValue(first)" > <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-left w-4 h-4"><polyline points="11 17 6 12 11 7"></polyline><polyline points="18 17 13 12 18 7"></polyline></svg> </a>
@@ -85,10 +70,12 @@
     import EditLink from "@/Buttons/EditLink";
     import DeleteLink from "@/Buttons/DeleteLink";
     import tableCaseMixin from "@/Mixins/tableCaseMixin";
+    import FetchAssignment from "@/Pages/Assigment/Reusable/FetchAssignment";
+
     export default {
-        components: {DeleteLink, EditLink},
+        components: {DeleteLink, EditLink,FetchAssignment},
         props: {
-            angss: {
+            ans: {
                 type: Array,
                 required:true
             },
@@ -97,22 +84,39 @@
                 required:true
             },
         },
+
         mixins:[tableCaseMixin],
         name: "AssigmentTable",
         data() {
             return {
-                angs : this.angss,
-                vangs : this.angss,
+                angs:this.vans.assigns.data,
+                vangs:this.vans.assigns.data,
+
+                whereto:"feaching",
 
                 indexValue:Number,
                 id:Number,
                 showSearch:true,
             }
         },
+        methods: {
+            fetchstaffData(data){
+                if(data.whereto == "feaching" ){
+                    axios.post(`/assignment/findAssignment`,data.form).then((res)=>{
+                        if (res.data.error == true){
+                            Swal.fire("I'm sorry I Can not Process Data",`${res.data.message}`,'error')
+                        }else{
+                            this.angs = res.data.subj;
+                            this.vangs = res.data.subj;
+                        }
+                    })
+                }
+            },
+        },
 
         computed: {
             dataDisplaying(){
-                return this.angss.slice(this.initNo,this.currentNo);
+                return this.angs.slice(this.initNo,this.currentNo);
             },
         },
 
