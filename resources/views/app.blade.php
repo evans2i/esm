@@ -13,18 +13,18 @@
 
         <!-- Styles -->
         <!-- <link rel="stylesheet" type="text/css" href="{{ asset('DataTables/datatables.min.css') }}"> -->
-        <link rel="stylesheet" href="{{ asset('vendors/css/vendors.min.css') }}">
+        <link rel="stylesheet" href="/vendors/css/vendors.min.css">
 
         <!-- <link rel="stylesheet" href="{{ asset('vendors/css/ui/prism.min.css') }}"> -->
-        <link rel="stylesheet" href="/dist/css/app.css" />
-        <link rel="stylesheet" href="/css/app.css" />
+        <link href="/dist/css/app.css" rel="stylesheet"/>
+        <link href="/css/app.css" rel="stylesheet" />
         <!-- <link href="{{ asset('css/icons.css ')}}" rel="stylesheet" type="text/css"> -->
         
         <!-- Scripts -->
         @routes
         <!-- <script type="text/javascript" src="{{ asset('DataTables/datatables.min.js') }}"></script> -->
-        <script src="/js/app.js" defer></script>
-        <script src="/dist/js/app.js" defer></script>
+        <script src="/js/app.js"></script>
+        <script src="/dist/js/app.js"></script>
     </head>
     {{-- class=" font-sans antialiased" --}}
     <body >
