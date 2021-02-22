@@ -32,8 +32,8 @@ class CreateFeeCollectionsTable extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreign('students_id')->references('id')->on('students');
-            $table->foreign('fee_masters_id')->references('id')->on('fee_masters');
+            $table->foreign('student_id')->references('id')->on('students');
+            $table->foreign('fee_master_id')->references('id')->on('fee_masters');
         });
     }
 
