@@ -16,15 +16,15 @@
         <link rel="stylesheet" href="{{ asset('vendors/css/vendors.min.css') }}">
 
         <!-- <link rel="stylesheet" href="{{ asset('vendors/css/ui/prism.min.css') }}"> -->
-        <link rel="stylesheet" href="{{ asset('dist/css/app.css') }}" />
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
+        <link rel="stylesheet" href="/dist/css/app.css" />
+        <link rel="stylesheet" href="/css/app.css" />
         <!-- <link href="{{ asset('css/icons.css ')}}" rel="stylesheet" type="text/css"> -->
         
         <!-- Scripts -->
         @routes
         <!-- <script type="text/javascript" src="{{ asset('DataTables/datatables.min.js') }}"></script> -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
-        <script src="{{ asset('dist/js/app.js') }}" defer></script>
+        <script src="/js/app.js" defer></script>
+        <script src="/dist/js/app.js" defer></script>
     </head>
     {{-- class=" font-sans antialiased" --}}
     <body >
