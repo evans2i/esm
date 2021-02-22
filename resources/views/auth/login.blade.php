@@ -13,7 +13,7 @@
     <title>Login - School </title>
 
     <!-- BEGIN: CSS Assets-->
-    <link rel="stylesheet" href="{{ asset('dist/css/app.css') }}" />
+    <link rel="stylesheet" href="/dist/css/app.css" />
     <style>
         .submitBtn {
           width: 99%;
@@ -117,7 +117,7 @@
 
 
         <!-- BEGIN: JS Assets-->
-        <script src="{{ asset('dist/js/app.js') }}"></script> 
+        <script src="/dist/js/app.js"></script> 
         <script>
             cash(function () {
                 async function login() {
