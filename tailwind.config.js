@@ -2,12 +2,17 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
-    purge: [
-        './vendor/laravel/jetstream/**/*.blade.php',
-        './storage/framework/views/*.php',
-        './resources/views/**/*.blade.php',
-        './resources/js/**/*.vue',
-    ],
+    // purge: [
+    //     './vendor/laravel/jetstream/**/*.blade.php',
+    //     './storage/framework/views/*.php',
+    //     './resources/views/**/*.blade.php',
+    //     './resources/js/**/**/**/**/**/**/*.vue',
+    //     './resources/js/**/**/**/**/**/*.vue',
+    //     './resources/js/**/**/**/**/*.vue',
+    //     './resources/js/**/**/**/*.vue',
+    //     './resources/js/**/**/*.vue',
+    //     './resources/js/**/*.vue',
+    // ],
 
     variants: {
         zIndex: ['responsive', 'hover'],

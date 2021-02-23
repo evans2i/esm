@@ -25,7 +25,7 @@ mix.js('resources/js/app.js', 'public/js')
         require('postcss-import'),
         require('tailwindcss'),
     ])
-    .sass('resources/sass/app.scss', 'public/dist/css')
+    // .sass('resources/sass/app.scss', 'public/dist/css')
        .options({
            processCssUrls: false,
            postCss: [ tailwindcss('./tailwind.config.js') ],
@@ -67,8 +67,8 @@ mix.js('resources/js/app.js', 'public/js')
        .copyDirectory('resources/json', 'public/dist/json')
        .copyDirectory('resources/fonts', 'public/dist/fonts')
        .copyDirectory('resources/images', 'public/dist/images')
-       .webpackConfig(require('./webpack.config'));
-       // .browserSync('laralearn.van/');
+       .webpackConfig(require('./webpack.config'))
+       .browserSync('laralearn.van/');
 
 
 

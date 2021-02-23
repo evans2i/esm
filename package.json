@@ -66,7 +66,7 @@
         "zoom-vanilla.js": "^2.0.6"
     },
     "devDependencies": {
-        "@inertiajs/inertia": "^0.8.4",
+        "@inertiajs/inertia": "^0.1.9",
         "@inertiajs/inertia-vue": "^0.2.0",
         "@tailwindcss/ui": "^0.6.0",
         "axios": "^0.21.1",
