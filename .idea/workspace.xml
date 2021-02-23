@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="346f7753-0686-4005-9bb5-7aeb49229b49" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/../webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +241,7 @@
       <workItem from="1613888709392" duration="2874000" />
       <workItem from="1613971939367" duration="1170000" />
       <workItem from="1614008961291" duration="6922000" />
-      <workItem from="1614067205801" duration="7267000" />
+      <workItem from="1614067205801" duration="7555000" />
     </task>
     <servers />
   </component>
