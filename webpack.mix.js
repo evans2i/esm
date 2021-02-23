@@ -30,7 +30,7 @@ mix.js('resources/js/app.js', 'public/js')
            processCssUrls: false,
            postCss: [ tailwindcss('./tailwind.config.js') ],
        })
-       
+
        .webpackConfig({
            module: {
                rules: [
@@ -67,12 +67,12 @@ mix.js('resources/js/app.js', 'public/js')
        .copyDirectory('resources/json', 'public/dist/json')
        .copyDirectory('resources/fonts', 'public/dist/fonts')
        .copyDirectory('resources/images', 'public/dist/images')
-       .webpackConfig(require('./webpack.config'))
-       .browserSync('laralearn.van/');
+       .webpackConfig(require('./webpack.config'));
+       // .browserSync('laralearn.van/');
 
 
 
-   
+
 
 
 
