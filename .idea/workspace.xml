@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="346f7753-0686-4005-9bb5-7aeb49229b49" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../tailwind.config.js" afterDir="false" />
-    </list>
+    <list default="true" id="346f7753-0686-4005-9bb5-7aeb49229b49" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -241,7 +239,7 @@
       <workItem from="1613888709392" duration="2874000" />
       <workItem from="1613971939367" duration="1170000" />
       <workItem from="1614008961291" duration="6922000" />
-      <workItem from="1614067205801" duration="7555000" />
+      <workItem from="1614067205801" duration="8041000" />
     </task>
     <servers />
   </component>
