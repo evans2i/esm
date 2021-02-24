@@ -34,11 +34,11 @@
                 <!-- BEGIN: Login Info -->
                 <div class="hidden xl:flex flex-col min-h-screen">
                     <a href="" class="-intro-x flex items-center pt-5">
-                        <img alt="School" class="w-6" src="{{ asset('dist/images/student-for-head.svg') }}">
+                        <img alt="School" class="w-6" src="/dist/images/student-for-head.svg">
                         <span class="text-white text-xl ml-3"> S<span class="font-medium">chool</span></span>
                     </a>
                     <div class="my-auto">
-                        <img  class="-intro-x w-1/2 -mt-16 " src="{{ asset('dist/images/student-computer.svg') }}">
+                        <img  class="-intro-x w-1/2 -mt-16 " src="/dist/images/student-computer.svg">
                         <div class="border border-b border-gray dark:border-dark-5">
                             <div class="-intro-x text-white font-medium text-lg leading-tight mt-10">Welcome Sign in to Your Account And</div>
                             <div class="-intro-x mt-1 text-white text-xl text-center dark:text-gray-500">I Realy Promise</div>

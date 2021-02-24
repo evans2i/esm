@@ -1,7 +1,7 @@
 <template>
     <div class="intro-x dropdown w-8 h-8">
         <div @click="isYes = !isYes" class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in scale-110">
-            <img :alt="$page.user.email" src="/dist/images/profile-13.jpg">
+            <img :alt="$page.user.email" src="/dist/images/profile-9.jpg">
         </div>
         <!-- <portal to="profile-setting"></portal> -->
             <div class="upddown-box w-56" :class="{'show':isYes}">

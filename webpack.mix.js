@@ -26,6 +26,7 @@ mix.js('resources/js/app.js', 'public/js')
         require('tailwindcss'),
     ])
     // .sass('resources/sass/app.scss', 'public/dist/css')
+    //         "heroku-postbuild": "npm run prod",
        .options({
            processCssUrls: false,
            postCss: [ tailwindcss('./tailwind.config.js') ],
@@ -66,7 +67,7 @@ mix.js('resources/js/app.js', 'public/js')
        })
        .copyDirectory('resources/json', 'public/dist/json')
        .copyDirectory('resources/fonts', 'public/dist/fonts')
-       .copyDirectory('resources/images', 'public/dist/images')
+       // .copyDirectory('resources/images', 'public/dist/images')
        .webpackConfig(require('./webpack.config'))
        .browserSync('laralearn.van/');
 
