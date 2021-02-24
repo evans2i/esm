@@ -4,6 +4,7 @@
     <list default="true" id="346f7753-0686-4005-9bb5-7aeb49229b49" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/seeders/StudentStatusSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/seeders/StudentStatusSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,7 +244,7 @@
       <workItem from="1613971939367" duration="1170000" />
       <workItem from="1614008961291" duration="6922000" />
       <workItem from="1614067205801" duration="8041000" />
-      <workItem from="1614164586444" duration="4829000" />
+      <workItem from="1614164586444" duration="5899000" />
     </task>
     <servers />
   </component>
@@ -287,9 +288,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1612189123425" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1614171380982">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1614172809681">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1614171380982" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1614172809681" />
   </component>
 </project>
