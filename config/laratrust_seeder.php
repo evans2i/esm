@@ -17,10 +17,8 @@ return [
             'payments' => 'c,r,u,d',
             'profile' => 'r,u'
         ],
-        'administrator' => [
-            'users' => 'c,r,u,d',
-            'payments' => 'c,r,u',
-            'profile' => 'r,u'
+        'student' => [
+            'profile' => 'r,u',
         ],
         'owner' => [
             'users' => 'c,r,u,d',
@@ -40,6 +38,9 @@ return [
             'profile' => 'r,u',
             'payments' => 'c,r,u',
         ],
+        'librarian' => [
+            'profile' => 'r,u',
+        ],
         'academic' => [
             'users' => 'c,r,u,d',
             'profile' => 'r,u',
@@ -53,13 +54,7 @@ return [
         'warden' => [
             'profile' => 'r,u',
         ],
-        'student' => [
-            'profile' => 'r,u',
-        ],
-
-        'role_name' => [
-            'module_1_name' => 'c,r,u,d',
-        ]
+        
     ],
 
     'permissions_map' => [

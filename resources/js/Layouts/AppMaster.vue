@@ -8,7 +8,7 @@
             <div class="top-bar-boxed flex items-center">
                 <!-- BEGIN: Logo -->
                 <a href="" class="-intro-x hidden md:flex">
-                    <img alt="Shool Logo" class="w-6" src="/dist/images/logo.svg">
+                    <img alt="Shool Logo" class="w-6" src="/dist/images/book-and-pen.svg">
                     <span class="text-white text-lg ml-3"> Sch<span class="font-medium">ool</span> </span>
                 </a>
                 <!-- END: Logo -->

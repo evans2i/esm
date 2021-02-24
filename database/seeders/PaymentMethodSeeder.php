@@ -33,6 +33,14 @@ class PaymentMethodSeeder extends Seeder
                 'updated_at' => \Carbon\Carbon::now(),
                 'created_by' => 1,
                 'last_updated_by' => 1,
+                'title' => 'Cheque',
+                'status' => 1
+            ],
+            [
+                'created_at' => \Carbon\Carbon::now(),
+                'updated_at' => \Carbon\Carbon::now(),
+                'created_by' => 1,
+                'last_updated_by' => 1,
                 'title' => 'Online Payment',
                 'status' => 1
             ]

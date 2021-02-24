@@ -16,26 +16,10 @@ class YearSeeder extends Seeder
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now(),
                 'created_by' => 1,
-                'title' => '2018',
+                'title' => '2021',
                 'active_status' => 0,
-                'status' => 0
-            ],
-            [
-                'created_at' => \Carbon\Carbon::now(),
-                'updated_at' => \Carbon\Carbon::now(),
-                'created_by' => 1,
-                'title' => '2019',
-                'active_status' => 0,
-                'status' => 0
-            ],
-            [
-                'created_at' => \Carbon\Carbon::now(),
-                'updated_at' => \Carbon\Carbon::now(),
-                'created_by' => 1,
-                'title' => '2020',
-                'active_status' => 1,
                 'status' => 1
-            ],
+            ]
         ]);
     }
 }

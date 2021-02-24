@@ -4,19 +4,37 @@
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="31.421px" height="31.421px" viewBox="0 0 31.421 31.421" style="enable-background:new 0 0 31.421 31.421;"
 	 xml:space="preserve" fill="#ffffff">
+    <defs>
+        <clipPath id="clip-path">
+          <rect id="Rectangle_73" data-name="Rectangle 73" width="6395" height="1079" transform="translate(-5391)" fill="#fff"/>
+        </clipPath>
+            <linearGradient id="linear-gradient" x1="0.747" y1="0.222" x2="0.973" y2="0.807" gradientUnits="objectBoundingBox">
+              <stop offset="0" stop-color="#070808"/>
+            </linearGradient>
+            <linearGradient id="linear-absolute" x1="0.747" y1="0.222" x2="0.973" y2="0.807" gradientUnits="objectBoundingBox">
+                <stop offset="-10" stop-color="#a39d77"/>
+            </linearGradient>
+            <linearGradient id="linear-chair" x1="0.747" y1="0.222" x2="0.973" y2="0.807" gradientUnits="objectBoundingBox">
+                <stop offset="-10" stop-color="#182730"/>
+            </linearGradient>
+            <linearGradient id="linear-head" x1="0.747" y1="0.222" x2="0.973" y2="0.807" gradientUnits="objectBoundingBox">
+                <stop offset="-10" stop-color="#5e6061"/>
+            </linearGradient>
+    </defs>
 <g>
 	<g>
-		<circle cx="12.478" cy="4.021" r="4.021"/>
-		<polygon points="15.122,18.172 12.84,22.962 12.542,23.588 8.482,23.588 5.663,12.313 3.648,12.816 6.86,25.666 8.485,25.666 
-			6.4,30.258 7.66,30.829 10.005,25.666 13.444,25.666 15.698,30.82 16.966,30.268 14.957,25.666 16.417,25.666 16.417,23.588 
-			13.877,23.588 14.177,22.962 15.064,21.096 16.332,18.438 27.101,18.438 27.101,17.23 15.57,17.23 		"/>
+		<circle cx="12.478" cy="4.021" r="4.021" fill="url(#linear-head)"/>
+
+		<polygon points="15.122,18.172 12.84,22.962 12.542,23.588 8.482,23.588 5.663,12.313 3.648,12.816 6.86,25.666 8.485,25.666
+			6.4,30.258 7.66,30.829 10.005,25.666 13.444,25.666 15.698,30.82 16.966,30.268 14.957,25.666 16.417,25.666 16.417,23.588
+			13.877,23.588 14.177,22.962 15.064,21.096 16.332,18.438 27.101,18.438 27.101,17.23 15.57,17.23" fill="url(#linear-chair)"/>
 		<path d="M14.061,9.291H9.488L8.81,22.962h2.311h0.952l2.872-6.028l0.177-0.371l0.253-3.348l2.958,1.937L15.755,15l0.012,1.219
 			l2.751,0.369l-0.013-1.323l0.263,0.171v1.186h8.246L27.773,8.6l-0.749,0.153l-6.418,1.119l-0.438,4.711L14.061,9.291z
 			 M16.463,15.875v-0.283l1.121,0.084l0.013,0.33L16.463,15.875z M22.808,16.039h-0.583v-0.328h0.583V16.039z M23.616,16.039h-0.583
 			v-0.328h0.583V16.039z M26.009,16.039h-2.139v-0.328h2.139V16.039z M20.955,10.559l6.004-1.053l-0.465,5.677h-5.636l-0.286-0.248
-			L20.955,10.559z"/>
-		<polygon points="18.546,20.146 16.284,20.146 14.944,22.962 15.122,22.962 18.546,22.962 18.546,31.421 22.166,31.421 
-			22.166,20.146 21.876,20.146 		"/>
+			L20.955,10.559z" fill="url(#linear-absolute)" />
+		<polygon points="18.546,20.146 16.284,20.146 14.944,22.962 15.122,22.962 18.546,22.962 18.546,31.421 22.166,31.421
+			22.166,20.146 21.876,20.146" fill="url(#linear-gradient)"/>
 	</g>
 </g>
 <g>
