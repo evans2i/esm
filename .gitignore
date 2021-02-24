@@ -2,6 +2,10 @@
 /.idea
 /public/hot
 /public/storage
+/public/Datatables
+/public/custom
+/resources/images
+/public/
 /storage/*.key
 /vendor
 .env
