@@ -38,8 +38,12 @@ class YearController extends Controller
         $input = [
             'title' => $request->title,
             'status' => $request->status,
+            'active_status' => $request->status,
         ];
+        $last = Year::get()->latest()->first();
         $van = Year::create($input);
+        $last->active_status = "not-active";
+        $last->update;
         return response()->json($van);
     }
 
@@ -64,6 +68,7 @@ class YearController extends Controller
      */
     public function update(Request $request, Year $year)
     {
+
         if ($request->has('title')) {
             $year->title = $request->title;
         }

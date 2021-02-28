@@ -369,51 +369,89 @@
 
         </template>
         <template v-if="$role.IsLibrarian()">
-            <li v-if="$role.IsLibrarian()">
-                <inertia-link href="/library/studentLibrary/student"  class="top-menu" >
-                    <div class="top-menu__icon"> <i class="feather icon-user"></i></div>
-                    <div class="top-menu__title">Students</div>
-                </inertia-link>
-            </li>
-            <li v-if="$role.IsLibrarian()">
-                <inertia-link href="/library/studentLibrary/staff"  class="top-menu" >
-                    <div class="top-menu__icon"> <i class="feather icon-user"></i></div>
-                    <div class="top-menu__title">Staff</div>
-                </inertia-link>
-            </li>
 
+            <li>
+                <a href="javascript:;" class="top-menu">
+                    <div class="top-menu__icon"> <i class="feather icon-activity"></i> </div>
+                    <div class="top-menu__title"> Members<i class="feather icon-chevron-down top-menu__sub-icon" ></i> </div>
+                </a>
+                <ul class="">
+                    <li v-if="$role.IsLibrarian()">
+                        <inertia-link href="/library/studentLibrary/student"  class="top-menu" >
+                            <div class="top-menu__icon"> <i class="feather icon-user"></i></div>
+                            <div class="top-menu__title">Students</div>
+                        </inertia-link>
+                    </li>
+                    <li v-if="$role.IsLibrarian()">
+                        <inertia-link href="/library/studentLibrary/staff"  class="top-menu" >
+                            <div class="top-menu__icon"> <i class="feather icon-user"></i></div>
+                            <div class="top-menu__title">Staff</div>
+                        </inertia-link>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;" class="top-menu">
+                    <div class="top-menu__icon"> <i class="feather icon-activity"></i> </div>
+                    <div class="top-menu__title"> Books<i class="feather icon-chevron-down top-menu__sub-icon" ></i> </div>
+                </a>
+                <ul class="">
+                    <li v-if="$role.IsLibrarian()" >
+                        <inertia-link href="/library/bookMasters"  class="top-menu" >
+                            <div class="top-menu__icon"> <i class="feather icon-book"></i></div>
+                            <div class="top-menu__title">All Books</div>
+                        </inertia-link>
+                    </li>
+                    <li v-if="$role.IsLibrarian()">
+                        <inertia-link href="/manage/bookCategories"  class="top-menu" >
+                            <div class="top-menu__icon"> <i class="feather icon-book"></i></div>
+                            <div class="top-menu__title">Books Category</div>
+                        </inertia-link>
+                    </li>
+                </ul>
+            </li>
             <li v-if="$role.IsLibrarian()" >
                 <inertia-link href="/library/books"  class="top-menu" >
                     <div class="top-menu__icon"> <i class="feather icon-plus"></i></div>
                     <div class="top-menu__title">Issue Books</div>
                 </inertia-link>
             </li>
-            <li v-if="$role.IsLibrarian()" >
-                <inertia-link href="/library/bookMasters"  class="top-menu" >
-                    <div class="top-menu__icon"> <i class="feather icon-book"></i></div>
-                    <div class="top-menu__title">All Books</div>
-                </inertia-link>
-            </li>
-            <li v-if="$role.IsLibrarian()">
-                <inertia-link href="/manage/bookCategories"  class="top-menu" >
-                    <div class="top-menu__icon"> <i class="feather icon-book"></i></div>
-                    <div class="top-menu__title">Books Category</div>
-                </inertia-link>
-            </li>
-
         </template>
         <template v-if="$role.IsStaff()">
+
             <li>
-                <inertia-link href="/users/students"  class="top-menu" >
-                    <div class="top-menu__icon"> <i class="feather icon-clock"></i> </div>
-                    <div class="top-menu__title"> Students </div>
-                </inertia-link>
+                <a href="javascript:;" class="top-menu">
+                    <div class="top-menu__icon"> <i class="feather icon-activity"></i> </div>
+                    <div class="top-menu__title"> Admission<i class="feather icon-chevron-down top-menu__sub-icon" ></i> </div>
+                </a>
+                <ul class="">
+                    <li>
+                        <inertia-link href="/users/students"  class="top-menu" >
+                            <div class="top-menu__icon"> <i class="feather icon-clock"></i> </div>
+                            <div class="top-menu__title"> Students </div>
+                        </inertia-link>
+                    </li>
+                </ul>
             </li>
             <li>
-                <inertia-link href="/accademic/examMarkLedger"  class="top-menu" >
-                    <div class="top-menu__icon"> <i class="feather icon-user"></i></div>
-                    <div class="top-menu__title">Examination Results</div>
-                </inertia-link>
+                <a href="javascript:;" class="top-menu">
+                    <div class="top-menu__icon"> <i class="feather icon-activity"></i> </div>
+                    <div class="top-menu__title"> Examination<i class="feather icon-chevron-down top-menu__sub-icon" ></i> </div>
+                </a>
+                <ul class="">
+                    <li>
+                        <inertia-link href="/accademic/examMarkLedger"  class="top-menu" >
+                            <div class="top-menu__icon"> <i class="feather icon-user"></i></div>
+                            <div class="top-menu__title">Examination Results</div>
+                        </inertia-link>
+                    </li>
+                    <li>
+                        <inertia-link href="/accademic/examResult"  class="top-menu" >
+                            <div class="top-menu__icon"> <i class="feather icon-user"></i></div>
+                            <div class="top-menu__title"> Result Examination </div>
+                        </inertia-link>
+                    </li>
+                </ul>
             </li>
             <li>
                 <inertia-link href="/assignment/assignments"  class="top-menu" >
@@ -421,12 +459,7 @@
                     <div class="top-menu__title">Assignments</div>
                 </inertia-link>
             </li>
-            <li>
-                <inertia-link href="/accademic/examResult"  class="top-menu" >
-                    <div class="top-menu__icon"> <i class="feather icon-user"></i></div>
-                    <div class="top-menu__title"> Result Examination </div>
-                </inertia-link>
-            </li>
+
         </template>
 
         <template v-if="$role.IsStudent()">
@@ -495,16 +528,10 @@
                     <div class="top-menu__title"> Fee Settups <i class="feather icon-chevron-down top-menu__sub-icon" ></i> </div>
                 </a>
                 <ul class="">
-                    <li v-if="$role.IsAccountant()">
-                        <inertia-link href="/accountant/quickReceiveFee"  class="top-menu" >
-                            <div class="top-menu__icon"> <i class="feather icon-plus"></i></div>
-                            <div class="top-menu__title">Quick Receive Fee</div>
-                        </inertia-link>
-                    </li>
-                    <li v-if="$role.IsAccountant()">
-                        <inertia-link href="/accountant/feeCollections"  class="top-menu" >
-                            <div class="top-menu__icon"> <i class="feather icon-plus"></i></div>
-                            <div class="top-menu__title">Collect Fee</div>
+                    <li >
+                        <inertia-link href="/manage/feeHeads"  class="top-menu" >
+                            <div class="top-menu__icon"> <i class="feather icon-calculator"></i></div>
+                            <div class="top-menu__title">Fee Head</div>
                         </inertia-link>
                     </li>
                     <li v-if="$role.IsAccountant()">
@@ -513,27 +540,34 @@
                             <div class="top-menu__title">Add Fee</div>
                         </inertia-link>
                     </li>
-                    <li >
-                        <inertia-link href="/manage/feeHeads"  class="top-menu" >
-                            <div class="top-menu__icon"> <i class="feather icon-calculator"></i></div>
-                            <div class="top-menu__title">Fee Head</div>
+                    <li v-if="$role.IsAccountant()">
+                        <inertia-link href="/accountant/feeMasters"  class="top-menu" >
+                            <div class="top-menu__icon"> <i class="feather icon-plus"></i></div>
+                            <div class="top-menu__title">Balance Fee</div>
+                        </inertia-link>
+                    </li>
+                    <li v-if="$role.IsAccountant()">
+                        <inertia-link href="/accountant/feeCollections"  class="top-menu" >
+                            <div class="top-menu__icon"> <i class="feather icon-plus"></i></div>
+                            <div class="top-menu__title">Received Detail</div>
                         </inertia-link>
                     </li>
 
                 </ul>
             </li>
             <li v-if="$role.IsAccountant()">
-                <inertia-link href="/accademic/examSchedules"  class="top-menu" >
+                <inertia-link href="/accountant/quickReceiveFee"  class="top-menu" >
                     <div class="top-menu__icon"> <i class="feather icon-plus"></i></div>
-                    <div class="top-menu__title">Balance Fee</div>
+                    <div class="top-menu__title">Quick Receive Fee</div>
                 </inertia-link>
             </li>
             <li v-if="$role.IsAccountant()">
-                <inertia-link href="/accademic/examSchedules"  class="top-menu" >
+                <inertia-link href="/accountant/feeCollections"  class="top-menu" >
                     <div class="top-menu__icon"> <i class="feather icon-plus"></i></div>
-                    <div class="top-menu__title">Received Detail</div>
+                    <div class="top-menu__title">Collect Fee</div>
                 </inertia-link>
             </li>
+
         </template>
         <template  v-if="$role.IsAcademic()">
             <li v-if="$role.IsAcademic()">

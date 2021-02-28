@@ -5,6 +5,7 @@
                 <inertia-link v-if="head.type == 'links'" :href="head.modalink"  class="button text-white shadow-md mr-2 bg-purple-400" >{{head.name}}</inertia-link>
                 <button v-else-if="head.type == 'modal'" @click="$modal.show(`${head.modalink}`)"  class="button text-white shadow-md mr-2 bg-purple-400" >{{head.name}}</button>
                 <button v-else-if="head.type == 'toggle'" @click="head.modalink"  class="button text-white shadow-md mr-2 bg-purple-400" >{{head.name}}</button>
+                <h3 class="text-xl font-medium mr-auto text-big" v-else>{{head.name}}</h3>
             </template>
         </div>
         <div class="w-full sm:w-auto flex mt-4 sm:mt-0 ml-auto">

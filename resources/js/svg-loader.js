@@ -1,7 +1,8 @@
 window.$ = require('cash-dom');
-(function(cash) { 
+window.cash = require('cash-dom');
+(function(cash) {
     "use strict";
-    
+
     let initSvgLoader = (function svgLoader(init) {
         cash(`[data-loading-icon]`).each(function() {
             let color = cash(this).data('color') !== undefined ? cash(this).data('color') : cash('body').css('color')

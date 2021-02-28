@@ -23,10 +23,17 @@
                 </select>
             </div>
 
+            <div v-if="whereto=='adding'" class="mt-6 lg:mt-0 relative flex-1 flex items-center px-5 border-t lg:border-0 border-gray-200 dark:border-dark-5 lg:pt-0">
+                <label>Subject</label>
+                <select class="input w-full border" v-model="form.subject_id" @change="fetchingData()">
+                    <option value="" disabled selected>Select Subject</option>
+                    <option v-for="subject in subjects" :value="subject.id" :key="subject.id">{{subject.label}}</option>
+                </select>
+            </div>
         </div>
 
-        <div class="flex flex-col lg:flex-row border-b border-gray-200 dark:border-dark-5 pb-5 -mx-5">
-            <div class="mt-6 lg:mt-0 relative flex-1 flex items-center px-5 border-t lg:border-0 border-gray-200 dark:border-dark-5 lg:pt-0">
+        <div  v-if="whereto=='fetching'" class="flex flex-col lg:flex-row border-b border-gray-200 dark:border-dark-5 pb-5 -mx-5">
+            <div  class="mt-6 lg:mt-0 relative flex-1 flex items-center px-5 border-t lg:border-0 border-gray-200 dark:border-dark-5 lg:pt-0">
                 <label>Year </label>
                 <select class="input w-full border" v-model="form.year_id" >
                     <option value="" selected>Select Year</option>
@@ -40,7 +47,7 @@
                     <option v-for="subject in subjects" :value="subject.id" :key="subject.id">{{subject.label}}</option>
                 </select>
             </div>
-            <div class="mt-6 lg:mt-0 relative flex-1 flex items-center px-5 border-t lg:border-0 border-gray-200 dark:border-dark-5 lg:pt-0">
+            <div  class="mt-6 lg:mt-0 relative flex-1 flex items-center px-5 border-t lg:border-0 border-gray-200 dark:border-dark-5 lg:pt-0">
                 <label>Search</label>
                 <search-button class="mt-6 relative flex-1 flex items-center px-5"  @searchbtn="fetchingData()" ></search-button>
             </div>
@@ -122,11 +129,11 @@
                     this.form.subject_id="";
                 }
 
-
             },
             fetchingData(){
                 this.fetch({whereto:this.whereto ,form:this.form});
             }
+
         },
     }
 </script>

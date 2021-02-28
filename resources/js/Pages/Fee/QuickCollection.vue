@@ -15,19 +15,48 @@
                 {{ pagetitle }}
             </h2>
         </div>
-    <quick-receive :urls="urls" :pagetitle="pagetitle"></quick-receive>
+        <total-button :headerDetail="headerDetail"></total-button>
+        <quick-receive :urls="urls" :pagetitle="pagetitle"></quick-receive>
     </app-master>
 </template>
 
 <script>
     import AppMaster from "@/Layouts/AppMaster";
     import QuickReceive from "@/MyComponent/Account/QuickReceive"
+    import TotalButton from "@/Reusable/TotalButton";
 
     export default {
         props:['urls','pagetitle'],
         components: {
             AppMaster,
-            QuickReceive
+            QuickReceive,
+            TotalButton
+        },
+        data() {
+            return {
+                headerDetail: {
+                    left: [
+                    ],
+                    right: [
+                        {
+                            type: "links",
+                            name: "Collect Fee",
+                            modalink: "/accountant/feeCollections",
+                        },
+                        {
+                            type: "links",
+                            name: "Add Fee",
+                            modalink: "/accountant/feeMasters",
+                        },
+                        {
+                            type: "links",
+                            name: "Fee Head",
+                            modalink: "/manage/feeHeads",
+                        },
+
+                    ]
+                },
+            }
         },
 
 

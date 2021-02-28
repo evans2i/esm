@@ -6,9 +6,10 @@
             <h2 class="text-lg font-medium mr-auto">
 
             </h2>
-            <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
-                <button class="button text-white shadow-md mr-2" :class="addingTheme" @click="changeViews">{{ txtDiplay }}</button>
-            </div>
+<!--            <div class="w-full sm:w-auto flex mt-4 sm:mt-0">-->
+<!--&lt;!&ndash;                <button class="button text-white shadow-md mr-2" :class="addingTheme" @click="changeViews">{{ txtDiplay }}</button>&ndash;&gt;-->
+<!--            </div>-->
+<!--            -->
         </div>
 
         <div class="grid grid-cols-1 gap-1 lg:mt-5">

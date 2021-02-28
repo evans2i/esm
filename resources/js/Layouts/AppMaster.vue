@@ -8,24 +8,24 @@
             <div class="top-bar-boxed flex items-center">
                 <!-- BEGIN: Logo -->
                 <a href="" class="-intro-x hidden md:flex">
-                    <img alt="Shool Logo" class="w-6" src="/dist/images/book-and-pen.svg">
+                    <img alt="Shool Logo" class="w-4 bg-white w-10 h-10 rounded-full overflow-hidden shadow-lg" src="/dist/images/book-and-pen.svg">
                     <span class="text-white text-lg ml-3"> Sch<span class="font-medium">ool</span> </span>
                 </a>
                 <!-- END: Logo -->
                 <!-- BEGIN: Breadcrumb -->
-                <slot name="header"></slot>
-                <!-- END: Breadcrumb -->
-                <!-- BEGIN: Search -->
-                    <app-searching></app-searching>
-                <!-- END: Search -->
+                    <slot name="header"></slot>
+                    <!-- END: Breadcrumb -->
+                    <!-- BEGIN: Search -->
+                        <app-searching></app-searching>
+                    <!-- END: Search -->
 
-                <!-- BEGIN: Notifications -->
-                    <app-notification></app-notification>
-                <!-- END: Notifications -->
+                    <!-- BEGIN: Notifications -->
+                        <app-notification></app-notification>
+                    <!-- END: Notifications -->
 
-                <!-- BEGIN: Account Menu -->
-                    <account-settings></account-settings>
-                <!--  <portal-target name="profile-setting"></portal-target>-->
+                    <!-- BEGIN: Account Menu -->
+                        <account-settings></account-settings>
+                    <!--  <portal-target name="profile-setting"></portal-target>-->
                 <!-- END: Account Menu -->
             </div>
         </div>

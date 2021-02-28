@@ -17,11 +17,11 @@ export default {
             nextPage: "next",
 
             initdivider:0,
-            dividerData:5,
+            dividerData:10,
 
             initNo:0,
-            currentNo:5,
-            lastDivider :5
+            currentNo:10,
+            lastDivider :10
         }
     },
 

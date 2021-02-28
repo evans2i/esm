@@ -10,14 +10,9 @@
         <div class="py-12">
             <total-button :headerDetail="headerDetail"></total-button>
 
-            <assigment-table :ans="angs"  :urls="urls" v-if="!toggleview"></assigment-table>
+            <assigment-table :vans="vans" :dholder="holder" :urls="urls" v-if="!toggleview"></assigment-table>
 
-            <add-assigment :faculties="vans.faculty.data"
-                :staffs="vans.staff.data"
-                :years="vans.year.data"
-                :urls="urls"
-                :fetch="fetchstaffData"
-                :whereto="whereto" v-if="toggleview && !$role.IsSuperadministrator()"></add-assigment>
+            <add-assignment :adds="fuctionAdd" :vans="vans" :urls="urls" v-if="toggleview && !$role.IsSuperadministrator()"></add-assignment>
         </div>
     </app-master>
 </template>
@@ -27,7 +22,6 @@
 <script>
     import TotalButton from "@/Reusable/TotalButton";
     import AppMaster from "@/Layouts/AppMaster";
-    import FetchAssignment from "@/Pages/Assigment/Reusable/FetchAssignment";
     import AssigmentTable from "@/Pages/Assigment/Component/AssigmentTable";
     import AddAssignment from "@/Pages/Assigment/Component/AddAssignment";
     export default {
@@ -47,7 +41,6 @@
         },
         components:{
             AssigmentTable,
-            FetchAssignment,
             AddAssignment,
             AppMaster,
             TotalButton
@@ -71,21 +64,10 @@
                         },
 
                     ],
-
-                    right: [
-                        {
-                            type: "links",
-                            name: "Hostels",
-                            modalink: "/hostel/hostels",
-                        },
-                        {
-                            type: "links",
-                            name: "Rooms Type",
-                            modalink: "/manage/roomTypes",
-                        },
-
-                    ]
+                    right: []
                 },
+
+                holder:{},
 
             }
         },
@@ -93,13 +75,24 @@
 
             togglerToFalse() {
                 this.whereto = "feaching";
-                this.toggleview = false;
+                this.toggleview = true;
             },
             togglerToTrue() {
                 this.whereto = "adding";
-                this.toggleview = true;
+                this.toggleview = false;
+            },
+
+            fuctionAdd(data){
+                this.whereto = "adding";
+                this.toggleview = false;
+                this.holder= data;
             }
+
         },
+
+        created(){
+           
+        }
     }
 </script>
 

@@ -18,7 +18,7 @@
         .submitBtn {
           width: 99%;
           position: relative;
-          background: linear-gradient(135deg, #3ce77b 0%, #008eff 70%);
+          background: linear-gradient(180deg, #3ce77b 0%, #0c1218 25%, #008eff 75%,#420E09 100% );
           border-radius: 15px;
           transition: 0.3s ease-in-out;
         }
@@ -73,8 +73,8 @@
                             {{-- <button id="btn-register" class="button button--lg w-full xl:w-32 text-gray-700 border border-gray-300 dark:border-dark-5 dark:text-gray-300 mt-3 xl:mt-0 align-top">Sign up</button> --}}
                         </div>
                         {{-- <div class="intro-x mt-10 xl:mt-24 text-gray-700 dark:text-gray-600 text-center xl:text-left">
-                            By signin up, you agree to our <br> 
-                            <a class="text-theme-1 dark:text-theme-10" href="">Terms and Conditions</a> & 
+                            By signin up, you agree to our <br>
+                            <a class="text-theme-1 dark:text-theme-10" href="">Terms and Conditions</a> &
                             <a class="text-theme-1 dark:text-theme-10" href="">Privacy Policy</a>
                         </div> --}}
                     </div>
@@ -83,41 +83,8 @@
             </div>
         </div>
 
-        {{-- <div class="container">
-            <div class="login-container">
-                <div class="login-container-img">
-                    <h1>Welcome to
-                        <span>codepen</span>
-                    </h1>
-                </div>
-                <div class="login-container-content">
-                    <form action="" class="login-form">
-                        <button type="button" class="buttonX">X</button>
-                        <h1>Login</h1>
-                        <p class="field">
-                            <label>Users name or Email</label>
-                            <input type="text" name="username" placeholder="user"/>
-                        </p>
-                        <p class="field">
-                            <label>Password</label>
-                            <input type="password" name="password" placeholder="password"/>
-                            <a href="">forget password?</a>
-                        </p>
-                        <button type="submit" class="submitBtn">Sign in</button>
-                        <div class="parting-line"><span>or</span></div>
-                        <div class="google-background">
-                            <div class="google-icon"></div>
-                            <p>Sign in with Google</p>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div> --}}
-
-
-
         <!-- BEGIN: JS Assets-->
-        <script src="/dist/js/app.js"></script> 
+        <script src="/js/logincash.js"></script>
         <script>
             cash(function () {
                 async function login() {
@@ -128,10 +95,9 @@
                     let email = cash('#input-email').val()
                     let password = cash('#input-password').val()
                     let rememberMe = cash('#input-remember-me').val()
-                    
+
                     // Loading state
                     cash('#btn-login').html('<i data-loading-icon="oval" data-color="white" class="w-5 h-5 mx-auto"></i>').svgLoader()
-                    await helper.delay(1500)
 
                     axios.post(`login`, {
                         email: email,
@@ -158,14 +124,14 @@
                         login()
                     }
                 })
-                
+
                 cash('#btn-login').on('click', function() {
                     login()
                 })
 
-                cash('#btn-register').on('click', function() {
-                    location.href = '/register'
-                })
+                // cash('#btn-register').on('click', function() {
+                //     location.href = '/register'
+                // })
 
             })
         </script>

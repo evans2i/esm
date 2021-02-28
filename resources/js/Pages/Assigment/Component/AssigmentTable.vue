@@ -2,12 +2,19 @@
     <div class="grid grid-cols-1 gap-1" >
         <div class="intro-y box lg:mt-5">
             <div class="overflow-x-auto">
+                <fetch-assignment :faculties="vans.faculty.data"
+                                  :staffs="vans.staff.data"
+                                  :years="vans.year.data"
+                                  :fetch="fetchstaffData"
+                                  :urls="urls"
+                                  :whereto="whereto">
+                </fetch-assignment>
 
                 <div class="intro-y col-span-12 flex flex-wrap sm:flex-no-wrap items-center mt-2">
-                    <a></a>
+                    <h3 class="text-xl font-medium mr-auto text-big" ></h3>
                     <div class="w-full sm:w-auto mt-3 sm:mt-0 sm:ml-auto md:ml-0">
-                        <div class="w-56 relative text-gray-700 dark:text-gray-300">
-                            <input type="text" class="input w-56 box pr-10 placeholder-theme-13" @input="searchDataInTable" placeholder="Search...">
+                        <div class="w-56 bg-theme-8 relative text-gray-700 dark:text-gray-300">
+                            <input type="text" class="input w-56  box pr-10 placeholder-theme-13" @input="searchDataInTable" placeholder="Search...">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search w-4 h-4 absolute my-auto inset-y-0 mr-3 right-0"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                         </div>
                     </div>
@@ -19,10 +26,10 @@
                     <div class="text-gray-500 mt-1">Statring: {{ van.publish_date | myDateF}}  End {{ van.end_date | myDateF }} </div>
                     <div class="text-gray-600 text-justify mt-1">{{ van.description}}</div>
                     <div class="font-medium flex mt-5">
-                        <button type="button" class="button button--sm bg-gray-200 dark:bg-dark-5 text-gray-600 dark:text-gray-300">View Student Answers</button>
-                        <button type="button" class="button button--sm border border-gray-300 dark:border-dark-5 text-gray-600 ml-auto">ReAssign</button>
-                        <edit-link  @editlink="actionEdit(index,van)" > Edit</edit-link>
-                        <delete-link @deletelink="actionDelete(index,van)"> Delete</delete-link>
+                        <inertia-link :href="urls +'/'+ `${van.id}`" class="button button--sm bg-gray-200 dark:bg-dark-5 text-gray-600 dark:text-gray-300">View Student Answers</inertia-link>
+                        <button type="button" @click="reasignAssignment()" class="button button--sm border border-gray-300 dark:border-dark-5 text-gray-600 ml-auto">ReAssign</button>
+<!--                        <edit-link  @editlink="actionEdit(index,van)" > Edit</edit-link>-->
+                        <delete-link v-if="$page.user.id === van.created_by" @deletelink="actionDelete(van)"> Delete</delete-link>
                     </div>
                 </div>
 
@@ -41,11 +48,11 @@
                             <li > <a class="pagination__link pagination__link--active"  href="javascript:;" @click.prevent="changeFunctionValue(valueTwo)" >{{valueTwo}}</a> </li>
                             <li> <a class="pagination__link"  href="javascript:;" @click.prevent="changeFunctionValue(valueThree)" >{{valueThree}}</a> </li>
                         </template>
-                        <template v-if="last === 2">
+                        <template v-if="last == 2">
                             <li> <a class="pagination__link"  href="javascript:;"  @click="changeFunctionValue(valueOne)">{{valueOne}}</a> </li>
                             <li > <a class="pagination__link pagination__link--active"  href="javascript:;" @click.prevent="changeFunctionValue(valueTwo)" >{{valueTwo}}</a> </li>
                         </template>
-                        <template v-if="last === 1">
+                        <template v-if="last == 1">
                             <li > <a class="pagination__link pagination__link--active"  href="javascript:;" @click.prevent="changeFunctionValue(valueOne)" >{{valueOne}}</a> </li>
                         </template>
 
@@ -57,7 +64,7 @@
                             <a class="pagination__link" href="javascript:;" @click.prevent="changeFunctionValue(last)" > <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-right w-4 h-4"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg> </a>
                         </li>
                     </ul>
-                    <select v-model="dividerData"  @change="dividerDataChange" class="input w-30 border" aria-label="Page Size" title="Page Size"><option value="2">2</option><option value="5">5</option><option value="10">10</option><option value="20">20</option><option value="30">30</option><option value="40">40</option><option value="50">50</option></select>
+                    <select v-model="dividerData"  @change="dividerDataChange" class="input w-30 border" aria-label="Page Size" title="Page Size"><option value="10">10</option><option value="20">20</option><option value="30">30</option><option value="40">40</option><option value="50">50</option></select>
                 </div>
             </div>
 
@@ -73,18 +80,20 @@
     import FetchAssignment from "@/Pages/Assigment/Reusable/FetchAssignment";
 
     export default {
-        components: {DeleteLink, EditLink,FetchAssignment},
         props: {
-            ans: {
-                type: Array,
+            vans: {
+                type: Object,
                 required:true
+            },
+            dholder:{
+                type: Object,
             },
             urls: {
                 type: String,
                 required:true
             },
         },
-
+        components: {DeleteLink, EditLink,FetchAssignment},
         mixins:[tableCaseMixin],
         name: "AssigmentTable",
         data() {
@@ -92,7 +101,7 @@
                 angs:this.vans.assigns.data,
                 vangs:this.vans.assigns.data,
 
-                whereto:"feaching",
+                whereto:"fetching",
 
                 indexValue:Number,
                 id:Number,
@@ -101,7 +110,7 @@
         },
         methods: {
             fetchstaffData(data){
-                if(data.whereto == "feaching" ){
+                if(data.whereto == "fetching" ){
                     axios.post(`/assignment/findAssignment`,data.form).then((res)=>{
                         if (res.data.error == true){
                             Swal.fire("I'm sorry I Can not Process Data",`${res.data.message}`,'error')
@@ -112,6 +121,19 @@
                     })
                 }
             },
+
+            actionDelete(van){
+                axios.delete(`${this.urls}/${van.id}`).then(()=>{
+                    let index = this.angs.indexOf(van);
+                    this.angs.splice(index,1);
+                }).catch(e=>{
+                    Swal.fire("I'm sorry I Can not Process Data",`Something Wrong Happen Try Again`,'error')
+                })
+
+            },
+            reasignAssignment(van){
+
+            }
         },
 
         computed: {
@@ -119,11 +141,19 @@
                 return this.angs.slice(this.initNo,this.currentNo);
             },
         },
+        mounted(){
+
+        },
 
         created() {
             appBus.listen('paginated',this.dataToDisplay)
             appBus.listen('search-filter',this.searchFilterData)
             appBus.listen('data-search-show',this.dataToDisplay)
+            let hoder = this.dholder
+            if(Object.keys(hoder).length != 0){
+                this.vangs.unshift(hoder);
+            }
+
         }
     }
 </script>

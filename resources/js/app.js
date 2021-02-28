@@ -6,6 +6,7 @@ import { InertiaApp } from '@inertiajs/inertia-vue';
 import { InertiaForm } from 'laravel-jetstream';
 import PortalVue from 'portal-vue';
 import vSelect from 'vue-select'
+import VMEditor from '@ckeditor/ckeditor5-vue2';
 
 import VModal from 'vue-js-modal';
 import {Form, HasError, AlertError} from 'vform';
@@ -16,8 +17,6 @@ import moment from 'moment';
 import Role from "./Roles/Role";
 import DatePicker from 'vue2-datepicker';
 import 'vue2-datepicker/index.css';
-
-
 
 window.Form = Form;
 window.Swal = Swal;
@@ -53,6 +52,7 @@ Vue.use(InertiaApp);
 Vue.use(InertiaForm);
 Vue.use(PortalVue);
 Vue.use(VModal);
+Vue.use( VMEditor );
 Vue.component(HasError.name, HasError);
 Vue.component(HasError.name, HasError);
 Vue.component('v-select', vSelect);
