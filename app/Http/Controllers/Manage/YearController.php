@@ -40,10 +40,13 @@ class YearController extends Controller
             'status' => $request->status,
             'active_status' => $request->status,
         ];
-        $last = Year::get()->latest()->first();
+        
         $van = Year::create($input);
-        $last->active_status = "not-active";
-        $last->update;
+        $last = Year::latest()->get()->first();
+        if($last){
+            $last->active_status = "not-active";
+            $last->update;
+        }
         return response()->json($van);
     }
 
