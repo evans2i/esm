@@ -21,7 +21,7 @@
             </div>
     </div>
 
-
+ 
 
 </template>
 
@@ -41,8 +41,8 @@
 
         methods:{
             logout() {
-                axios.post(route('logout').url()).then(response => {
-                    window.location = '/';
+                axios.post('/logout').then(response => {
+                    window.location = '/login';
                 })
             },
         }
