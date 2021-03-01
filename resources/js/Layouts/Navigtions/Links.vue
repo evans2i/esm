@@ -365,8 +365,6 @@
 
                 </ul>
             </li>
-
-
         </template>
         <template v-if="$role.IsLibrarian()">
 
@@ -428,38 +426,50 @@
                     <li>
                         <inertia-link href="/users/students"  class="top-menu" >
                             <div class="top-menu__icon"> <i class="feather icon-clock"></i> </div>
-                            <div class="top-menu__title"> Students </div>
+                            <div class="top-menu__title"> Students Admission </div>
+                        </inertia-link>
+                    </li>
+                    <li v-if="$role.IsAcademic()">
+                        <inertia-link href="/users/studentTransfer"  class="top-menu" >
+                            <div class="top-menu__icon"> <i class="feather icon-calendar"></i> </div>
+                            <div class="top-menu__title"> student Transfer </div>
                         </inertia-link>
                     </li>
                 </ul>
             </li>
-            <li>
+            <li >
                 <a href="javascript:;" class="top-menu">
-                    <div class="top-menu__icon"> <i class="feather icon-activity"></i> </div>
-                    <div class="top-menu__title"> Examination<i class="feather icon-chevron-down top-menu__sub-icon" ></i> </div>
+                    <div class="top-menu__icon"> <i class="feather icon-inbox"></i> </div>
+                    <div class="top-menu__title"> Examination <i class="feather icon-chevron-down top-menu__sub-icon" ></i> </div>
                 </a>
                 <ul class="">
+                    <li>
+                        <inertia-link href="/accademic/examSchedules"  class="top-menu" >
+                            <div class="top-menu__icon"> <i class="feather icon-user"></i></div>
+                            <div class="top-menu__title">Examination Schedule</div>
+                        </inertia-link>
+                    </li>
                     <li>
                         <inertia-link href="/accademic/examMarkLedger"  class="top-menu" >
                             <div class="top-menu__icon"> <i class="feather icon-user"></i></div>
                             <div class="top-menu__title">Examination Results</div>
                         </inertia-link>
                     </li>
-                    <li>
-                        <inertia-link href="/accademic/examResult"  class="top-menu" >
+                    <li v-if="$role.IsAcademic()">
+                        <inertia-link href="/manage/exams"  class="top-menu" >
                             <div class="top-menu__icon"> <i class="feather icon-user"></i></div>
-                            <div class="top-menu__title"> Result Examination </div>
+                            <div class="top-menu__title"> Examination Types</div>
                         </inertia-link>
                     </li>
                 </ul>
             </li>
+         
             <li>
                 <inertia-link href="/assignment/assignments"  class="top-menu" >
                     <div class="top-menu__icon"> <i class="feather icon-head"></i></div>
                     <div class="top-menu__title">Assignments</div>
                 </inertia-link>
             </li>
-
         </template>
 
         <template v-if="$role.IsStudent()">
@@ -570,32 +580,7 @@
 
         </template>
         <template  v-if="$role.IsAcademic()">
-            <li v-if="$role.IsAcademic()">
-                <a href="javascript:;" class="top-menu">
-                    <div class="top-menu__icon"> <i class="feather icon-inbox"></i> </div>
-                    <div class="top-menu__title"> Examination <i class="feather icon-chevron-down top-menu__sub-icon" ></i> </div>
-                </a>
-                <ul class="">
-                    <li>
-                        <inertia-link href="/accademic/examSchedules"  class="top-menu" >
-                            <div class="top-menu__icon"> <i class="feather icon-user"></i></div>
-                            <div class="top-menu__title">Examination Schedule</div>
-                        </inertia-link>
-                    </li>
-                    <li>
-                        <inertia-link href="/accademic/examMarkLedger"  class="top-menu" >
-                            <div class="top-menu__icon"> <i class="feather icon-user"></i></div>
-                            <div class="top-menu__title">Examination Results</div>
-                        </inertia-link>
-                    </li>
-                    <li>
-                        <inertia-link href="/manage/exams"  class="top-menu" >
-                            <div class="top-menu__icon"> <i class="feather icon-user"></i></div>
-                            <div class="top-menu__title"> Examination Types</div>
-                        </inertia-link>
-                    </li>
-                </ul>
-            </li>
+        
             <li v-if="$role.IsAcademic()">
                 <inertia-link href="/manage/assignFaculties"  class="top-menu" >
                     <div class="top-menu__icon"> <i class="feather icon-clock"></i> </div>
@@ -606,12 +591,6 @@
                 <inertia-link href="/manage/assignSubjects"  class="top-menu" >
                     <div class="top-menu__icon"> <i class="feather icon-clock"></i> </div>
                     <div class="top-menu__title">Assign Subject</div>
-                </inertia-link>
-            </li>
-            <li>
-                <inertia-link href="/users/studentTransfer"  class="top-menu" >
-                    <div class="top-menu__icon"> <i class="feather icon-calendar"></i> </div>
-                    <div class="top-menu__title"> student Transfer </div>
                 </inertia-link>
             </li>
         </template>
