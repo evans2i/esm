@@ -120,23 +120,8 @@
         methods:{
             submitFunction(){
                 this.$Progress.start();
-                if(this.form.id !== undefined || this.form.id !== ""){
-                    this.form.put(`${this.urls}/${this.form.id}`)
-                        .then((data) => {
-                            appBus.fire('hostels-update',data.data);
-                            Toast.fire({
-                                icon: "success",
-                                title: `${this.pagetitle} created successfully`
-                            });
-                            this.form.reset();
-                            this.$Progress.finish();
-                        })
-                        .catch((e) => {
-                            Swal.fire("Something Wrong Happened !", `${e.message}!`, "error");
-                        });
-
-                }else{
-                    this.form
+                if(this.form.id == undefined || this.form.id == ""){
+                        this.form
                         .post(`${this.urls}`)
                         .then((data) => {
                             appBus.fire('hostels',data.data);
@@ -150,6 +135,21 @@
                         .catch((e) => {
                             Swal.fire("Something Wrong Happened !", `${e.message}!`, "error");
                         });
+                }else{
+                    this.form.put(`${this.urls}/${this.form.id}`)
+                        .then((data) => {
+                            appBus.fire('hostels-update',data.data);
+                            Toast.fire({
+                                icon: "success",
+                                title: `${this.pagetitle} created successfully`
+                            });
+                            this.form.reset();
+                            this.$Progress.finish();
+                        })
+                        .catch((e) => {
+                            Swal.fire("Something Wrong Happened !", `${e.message}!`, "error");
+                        });
+                    
                 }
 
             },

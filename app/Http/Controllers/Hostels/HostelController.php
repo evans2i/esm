@@ -99,14 +99,14 @@ class HostelController extends Controller
     public function update(Request $request, Hostel $hostel)
     {
         $rules = [
-            'name' => 'required | unique:hostels',
+            'name' => 'required',
             'type' => 'required',
             'staff_id' => 'required',
             'roomsCount' => 'required',
         ];
         $this->validate($request, $rules);
 
-        if ($request->has('name')){
+        if ($request->has('name') && $hostel->name != $request->name){
             $hostel->name=$request->name;
         }
         if ($request->has('staff_id')){
