@@ -81,7 +81,7 @@ Vue.prototype.$role = new Role(appCurrent.props.user)
 // // "@inertiajs/inertia": "^0.1.9",
 //"@inertiajs/inertia": "^0.8.2",
 //customer js plugin
-import './appsrc';
+// import './appsrc';
 new Vue({
     render: (h) =>
         h(InertiaApp, {

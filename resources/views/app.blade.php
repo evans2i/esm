@@ -17,7 +17,6 @@
     <body >
         @inertia
         <script src="/js/app.js"></script>
-        <script src="/dist/js/app.js"></script>
     </body>
 
 </html>

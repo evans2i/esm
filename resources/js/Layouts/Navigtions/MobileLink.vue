@@ -6,12 +6,12 @@
             </a>
             <a href="javascript:;" id="mobile-menu-toggler">
                 <i  class="feather icon-bar-chart-2 w-8 h-8 text-white transform -rotate-90"></i>
-                
+
                 <!-- @click="display = !display" -->
               <!--   <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1 w-8 h-8 text-white transform -rotate-90"><line x1="21" y1="10" x2="3" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="21" y1="18" x2="3" y2="18"></line></svg> -->
             </a>
         </div>
-   
+
 
         <ul class="border-t border-theme-24 py-5 hidden" style="display: none;">
         <template  v-if="$role.IsSuperadministrator()">
@@ -584,11 +584,59 @@
 </template>
 
 <script>
+    import Velocity from 'velocity-animate'
 	export default{
         data(){
             return {
-                
+
             }
+        },
+
+        mounted(){
+
+            (function(cash) {
+                "use strict";
+
+                // Mobile Menu
+                cash('#mobile-menu-toggler').on('click', function() {
+                    if (cash('.mobile-menu').find('ul').first()[0].offsetParent !== null) {
+                        Velocity(cash('.mobile-menu').find('ul').first(), "slideUp")
+                    } else {
+                        Velocity(cash('.mobile-menu').find('ul').first(), "slideDown")
+                    }
+                })
+
+                cash('.mobile-menu').find('.menu').on('click', function() {
+                    if (cash(this).parent().find('ul').length) {
+                        if (cash(this).parent().find('ul').first()[0].offsetParent !== null) {
+                            cash(this).find('.menu__sub-icon').removeClass('transform rotate-180')
+                            Velocity(
+                                cash(this).parent().find('ul').first(),
+                                "slideUp",
+                                {
+                                    duration: 300,
+                                    complete: function(el) {
+                                        cash(this).removeClass('menu__sub-open')
+                                    }
+                                }
+                            )
+                        } else {
+                            cash(this).find('.menu__sub-icon').addClass('transform rotate-180')
+                            Velocity(
+                                cash(this).parent().find('ul').first(),
+                                "slideDown",
+                                {
+                                    duration: 300,
+                                    complete: function(el) {
+                                        cash(this).addClass('menu__sub-open')
+                                    }
+                                }
+                            )
+                        }
+                    }
+                })
+            })(cash)
+
         }
 
 	}

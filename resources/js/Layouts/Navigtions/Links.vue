@@ -463,7 +463,7 @@
                     </li>
                 </ul>
             </li>
-         
+
             <li>
                 <inertia-link href="/assignment/assignments"  class="top-menu" >
                     <div class="top-menu__icon"> <i class="feather icon-head"></i></div>
@@ -580,7 +580,7 @@
 
         </template>
         <template  v-if="$role.IsAcademic()">
-        
+
             <li v-if="$role.IsAcademic()">
                 <inertia-link href="/manage/assignFaculties"  class="top-menu" >
                     <div class="top-menu__icon"> <i class="feather icon-clock"></i> </div>
@@ -886,6 +886,7 @@
 </template>
 
 <script>
+    import '@/mobile-menu'
     export default {
         name: "Links",
 

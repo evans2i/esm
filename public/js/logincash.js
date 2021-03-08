@@ -14,7 +14,7 @@
 /******/ 			i: moduleId,
 /******/ 			l: false,
 /******/ 			exports: {}
-/******/ 		};  
+/******/ 		};
 /******/
 /******/ 		// Execute the module function
 /******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -20867,7 +20867,7 @@ window.cash = __webpack_require__(/*! cash-dom */ "./node_modules/cash-dom/dist/
 
 /***/ }),
 
-/***/ 4:
+/***/ 1:
 /*!*****************************************!*\
   !*** multi ./resources/js/logincash.js ***!
   \*****************************************/

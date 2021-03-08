@@ -16,7 +16,7 @@ const mix = require('laravel-mix');
 const tailwindcss = require('tailwindcss')
 
 mix.js('resources/js/app.js', 'public/js')
-    .js('resources/js/logincash.js','public/js') 
+    // .js('resources/js/logincash.js','public/js') 
     .postCss('resources/css/app.css', 'public/css', [
         require('postcss-import'),
         require('tailwindcss'),
@@ -27,8 +27,8 @@ mix.js('resources/js/app.js', 'public/js')
            processCssUrls: false,
            postCss: [ tailwindcss('./tailwind.config.js') ],
        })
-       .copyDirectory('resources/json', 'public/dist/json')
-       .copyDirectory('resources/fonts', 'public/dist/fonts')
+       // .copyDirectory('resources/json', 'public/dist/json')
+       // .copyDirectory('resources/fonts', 'public/dist/fonts')
        // .copyDirectory('resources/images', 'public/dist/images')
        .webpackConfig(require('./webpack.config'))
        .browserSync('laralearn.van/');

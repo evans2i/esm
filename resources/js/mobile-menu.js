@@ -1,8 +1,9 @@
+window.cash = require('cash-dom');
 import Velocity from 'velocity-animate'
 
-(function(cash) { 
+(function(cash) {
     "use strict";
-        
+
     // Mobile Menu
     cash('#mobile-menu-toggler').on('click', function() {
         if (cash('.mobile-menu').find('ul').first()[0].offsetParent !== null) {
@@ -17,8 +18,8 @@ import Velocity from 'velocity-animate'
             if (cash(this).parent().find('ul').first()[0].offsetParent !== null) {
                 cash(this).find('.menu__sub-icon').removeClass('transform rotate-180')
                 Velocity(
-                    cash(this).parent().find('ul').first(), 
-                    "slideUp", 
+                    cash(this).parent().find('ul').first(),
+                    "slideUp",
                     {
                         duration: 300,
                         complete: function(el) {
@@ -29,8 +30,8 @@ import Velocity from 'velocity-animate'
             } else {
                 cash(this).find('.menu__sub-icon').addClass('transform rotate-180')
                 Velocity(
-                    cash(this).parent().find('ul').first(), 
-                    "slideDown", 
+                    cash(this).parent().find('ul').first(),
+                    "slideDown",
                     {
                         duration: 300,
                         complete: function(el) {

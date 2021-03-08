@@ -101,6 +101,8 @@
                 students:[],
                 exams:[],
                 marks:[],
+
+                summark: [],
             }
         },
 
@@ -155,7 +157,6 @@
                 this.marks = results.marks;
                 this.students = results.students;
                 this.exams = results.exams;
-                console.log(this.exams.length);
             },
 
 

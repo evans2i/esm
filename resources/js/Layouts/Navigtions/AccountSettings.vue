@@ -41,7 +41,7 @@
 
         methods:{
             logout() {
-                axios.post(url('logout').secure_url()).then(response => {
+                axios.post('/logout').then(response => {
                     window.location = '/login';
                 })
             },
