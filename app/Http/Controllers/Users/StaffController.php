@@ -112,10 +112,18 @@ class StaffController extends Controller
         if ($request->has('gender')) {
             $staff->gender = $request->gender;
         }
+        if ($request->has('roles')) {
+            $user = User::find($staff->user_id);
+           if($user){
+                $user->roles()->sync($request->roles);
+           }
+        }
+
 
         if ($staff->isDirty()) {
             $staff->last_updated_by = Auth::Id();
-            $staff->update();
+           
+           $staff->update();
         }
         return response()->json($staff);
     }

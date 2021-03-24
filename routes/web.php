@@ -13,12 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-Route::get('/', function () {
-    return view('auth.login');
-});
+ Route::get('/', '\App\Http\Controllers\Manage\GeneralSettingController@welcome' );
+ Route::get('/not-found', function () { return Inertia\Inertia::render('NotFound');});
+ Route::get('/contact', function () { return Inertia\Inertia::render('NotFound');});
+ Route::get('/about-us', function () { return Inertia\Inertia::render('NotFound');});
+
+//     function () {
+////     return view('fronting');
+//     return Inertia\Inertia::render('Fronted');
+// };
+//Route::get('/', function () {
+//    return view('auth.login');
+//});
 
 Route::apiresource('/generalSetting', '\App\Http\Controllers\Manage\GeneralSettingController' );
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', '\App\Http\Controllers\DashboardController@dashboard')->name('dashboard');

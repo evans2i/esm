@@ -4,10 +4,16 @@ namespace App\Http\Controllers\manage;
 
 use App\Http\Controllers\Controller;
 use App\Models\GeneralSetting;
+use Inertia\Inertia;
 use Illuminate\Http\Request;
 
 class GeneralSettingController extends Controller
 {
+    public function welcome()
+    {
+        $van = GeneralSetting::get()->first();
+        return Inertia::render('Fronted',['van'=>$van,'urls'=>"/"]);
+    }
     /**
      * Display a listing of the resource.
      *

@@ -219,3 +219,40 @@
   visibility: hidden;
 }
 
+.page404 {
+  text-align: center;
+  padding-bottom: 130px;
+}
+
+.page404 img {
+  width: 50%;
+}
+
+.page404 h2 {
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.page404 p {
+  padding: 0 25%;
+}
+
+@media (max-width:575px) {
+  .container1 {
+    width: 100%;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .counter .container1 {
+    width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+

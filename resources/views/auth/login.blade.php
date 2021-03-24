@@ -33,7 +33,7 @@
             <div class="block xl:grid grid-cols-2 gap-4">
                 <!-- BEGIN: Login Info -->
                 <div class="hidden xl:flex flex-col min-h-screen">
-                    <a href="" class="-intro-x flex items-center pt-5">
+                    <a href="/" class="-intro-x flex items-center pt-5">
                         <img alt="School" class="w-6" src="/dist/images/student-for-head.svg">
                         <span class="text-white text-xl ml-3"> S<span class="font-medium">chool</span></span>
                     </a>
@@ -72,11 +72,10 @@
                             <button id="btn-login" class="button button--lg w-full xl:w-32 text-white bg-theme-1 xl:mr-3 submitBtn align-top">Login</button>
                             {{-- <button id="btn-register" class="button button--lg w-full xl:w-32 text-gray-700 border border-gray-300 dark:border-dark-5 dark:text-gray-300 mt-3 xl:mt-0 align-top">Sign up</button> --}}
                         </div>
-                        {{-- <div class="intro-x mt-10 xl:mt-24 text-gray-700 dark:text-gray-600 text-center xl:text-left">
-                            By signin up, you agree to our <br>
-                            <a class="text-theme-1 dark:text-theme-10" href="">Terms and Conditions</a> &
-                            <a class="text-theme-1 dark:text-theme-10" href="">Privacy Policy</a>
-                        </div> --}}
+                      <div class="intro-x mt-10 xl:mt-24 text-gray-700 dark:text-gray-600 text-center xl:text-left">
+                            Do You Want To Go Home <br>
+                            <a href="/" class="text-theme-1 justify-end dark:text-theme-10" href="">Go Home</a>
+                        </div>
                     </div>
                 </div>
                 <!-- END: Login Form -->

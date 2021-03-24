@@ -26,12 +26,13 @@
                             <table class="table table--sm">
                                 <thead>
                                     <tr>
-                                        <th colspan="7" class=" border border-b text-center dark:border-dark-5">{{student.name}}</th>
+                                        <th :colspan="(2*(Object.keys(exams).length) + 3)" class=" border border-b text-center dark:border-dark-5">{{student.name}}</th>
                                     </tr>
+                                   
                                     <tr>
-                                        <th colspan="3" class="border border-b text-center dark:border-dark-5">{{student.reg_no}}</th>
-                                        <th colspan="2" class="border border-b text-center dark:border-dark-5">Current Class: {{student.faculty}}</th>
-                                        <th colspan="2" class="border border-b text-center dark:border-dark-5">Current Class: {{student.semester}}</th>
+                                        <th :colspan="Math.ceil((2*(Object.keys(exams).length) + 3)/2)" class="border border-b text-center dark:border-dark-5">{{student.reg_no}}</th>
+                                        <th :colspan="Math.floor(((2*(Object.keys(exams).length) + 3)/2)/2)" class="border border-b text-center dark:border-dark-5">Current Class: {{student.faculty}}</th>
+                                        <th :colspan="Math.ceil(((2*(Object.keys(exams).length) + 3)/2)/2)" class="border border-b text-center dark:border-dark-5">Current Class: {{student.semester}}</th>
                                     </tr>
                                     <tr>
                                         <th class="border border-b dark:border-dark-5">Subjects</th>
@@ -59,6 +60,9 @@
                                     <td class="border" >{{findTotal(student.student_id,subject.id)/( Object.keys(exams).length)}}</td>
                                 </tr>
                                 </tbody>
+                                <tr>
+                                    <th :colspan="Math.ceil((2*(Object.keys(exams).length) + 3))" class="border border-b text-center dark:border-dark-5"><i>has been the <b>{{ findPosition(student.student_id) }}</b> out of {{students.length}} <b></b> students </i></th>
+                                </tr>
                             </table>
                         </div>
                     </div>
@@ -68,12 +72,6 @@
         </div >
 
 
-<!--        <modal name="super-large" height="auto" width="40%" >   -->
-<!--            <collect-fee :payFee="payFee" :urls="urls" :pagetitle="pagetitle"></collect-fee>    -->
-<!--        </modal>    -->
-<!--        <modal name="super-large-show" height="auto" width="78%" >-->
-<!--            <show-collect :payFee="showFee" :urls="urls" :pagetitle="pagetitle"></show-collect> -->
-<!--        </modal>    -->
     </div>
 </template>
 
@@ -151,12 +149,55 @@
                 return merk;
             },
 
-
+            sortNumbersAscending(a, b) {
+              return a.total - b.total;
+            },
+            sortNumbersDescending(a, b) {
+              return b.total - a.total;
+            },
             viewResutInCollection(results){
                 this.subjects= results.subjects;
                 this.marks = results.marks;
                 this.students = results.students;
                 this.exams = results.exams;
+                let result = [];
+                let arry = results.marks;
+                let students = results.students;
+                students.forEach((student,i)=>{
+                    let objects = {
+                        student_id:"",
+                        total:"",
+                    }
+                    let merk = 0;
+                    arry.forEach((ele)=>{
+                        if(ele.student_id == student.student_id){
+                           merk += (eval(ele.obtain_mark_theory) + eval(ele.obtain_mark_practical))
+                        }
+                     })
+                    objects.student_id = student.student_id
+                    objects.total = merk;
+                    result.push(objects);
+                })
+               this.summark = result.sort(this.sortNumbersAscending);
+            },
+
+           findPosition(id){
+                let students = this.summark;
+                let possition = Number;
+                // for(let i = 1; i<=students.length; i++){
+                //     if(ele.student_id == id){
+                //         possition = i;
+                //         break;
+                //     }
+                // }
+                students.forEach((ele,i)=>{
+                    if(ele.student_id == id){
+                        possition = students.length - i;
+                        return;
+                    }
+                    
+                })
+                return possition;
             },
 
 
@@ -169,8 +210,7 @@
                 document.body.appendChild(frame1);
                 let frameDoc = frame1.contentWindow ? frame1.contentWindow : frame1.contentDocument.document ? frame1.contentDocument.document : frame1.contentDocument;
                 frameDoc.document.open();
-                frameDoc.document.write('<html lang="en"><head><title>Receipt</title>');
-                frameDoc.document.write('<link rel="stylesheet" type="text/css" href="/vendors/css/vendors.min.css"/>');
+                frameDoc.document.write('<html lang="en"><head><title>Examination Result For</title>');
                 frameDoc.document.write('<link rel="stylesheet" type="text/css" href="/dist/css/app.css"/>');
                 frameDoc.document.write('<link rel="stylesheet" type="text/css" href="/css/app.css"/>');
                 frameDoc.document.write('</head><body>');
@@ -191,7 +231,9 @@
         computed: {
 
         },
+       
         created(){
+             
             appBus.listen('fetching-exam',this.viewResutInCollection);
         }
 

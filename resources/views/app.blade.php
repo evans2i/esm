@@ -11,12 +11,18 @@
 
         <link href="/dist/css/app.css" rel="stylesheet"/>
         <link href="/css/app.css" rel="stylesheet" />
+
         @routes
 
     </head>
     <body >
         @inertia
+
+        @if(Auth::check())
         <script src="/js/app.js"></script>
+         @else
+            <script src="/js/frontapp.js"></script>
+        @endif
     </body>
 
 </html>

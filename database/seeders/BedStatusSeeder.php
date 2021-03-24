@@ -1,6 +1,9 @@
 <?php
 
+namespace Database\Seeders;
+
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class BedStatusSeeder extends Seeder
 {
@@ -45,13 +48,13 @@ class BedStatusSeeder extends Seeder
                 'status' => 1
             ],
             [
-            'created_at' => \Carbon\Carbon::now(),
-            'updated_at' => \Carbon\Carbon::now(),
-            'created_by' => 1,
-            'title' => 'UnderMaintinance',
-            'display_class' => 'btn-default',
-            'status' => 1
-             ],
+                'created_at' => \Carbon\Carbon::now(),
+                'updated_at' => \Carbon\Carbon::now(),
+                'created_by' => 1,
+                'title' => 'UnderMaintinance',
+                'display_class' => 'btn-default',
+                'status' => 1
+            ],
             [
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now(),

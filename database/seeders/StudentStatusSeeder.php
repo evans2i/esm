@@ -1,5 +1,7 @@
 <?php
 
+namespace Database\Seeders;
+
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -12,7 +14,7 @@ class StudentStatusSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\StudentStatus::create([
+        DB::table('student_statuses')->insert([
             [
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now(),
