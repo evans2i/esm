@@ -2,52 +2,83 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="346f7753-0686-4005-9bb5-7aeb49229b49" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/seeders/newSeed/GeneralSettingSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/myapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/myapp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Manage/GeneralSettingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Manage/GeneralSettingController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Users/StaffController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Users/StaffController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/AccountCategorySeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/newSeed/AccountCategorySeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/AlertSettingSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/newSeed/AlertSettingSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/AttendanceStatusSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/newSeed/AttendanceStatusSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/BedStatusSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/newSeed/BedStatusSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/BookStatusSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/newSeed/BookStatusSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/CertificateTemplateSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/newSeed/CertificateTemplateSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/CustomerStatusSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/newSeed/CustomerStatusSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DaySeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/newSeed/DaySeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/GeneralSettingSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/LibraryCirculationSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/newSeed/LibraryCirculationSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/MeetingTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/newSeed/MeetingTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/MonthSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/newSeed/MonthSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/PaymentMethodSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/newSeed/PaymentMethodSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/PaymentTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/newSeed/PaymentTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/PermissionRole.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/newSeed/PermissionRole.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/PermissionTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/newSeed/PermissionTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/PostalExchangeTypeSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/newSeed/PostalExchangeTypeSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/RoleTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/newSeed/RoleTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/RoleUserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/newSeed/RoleUserSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/SmsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/newSeed/SmsTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/StatusTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/newSeed/StatusTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/StudentStatusSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/newSeed/StudentStatusSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/TimeZoneTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/newSeed/TimeZoneTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/TransactionLedgerSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/newSeed/TransactionLedgerSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/newSeed/UsersTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/YearSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/newSeed/YearSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dist/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Layouts/Navigtions/MobileLink.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Layouts/Navigtions/MobileLink.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/MyComponent/Exams/ResultExam.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/MyComponent/Exams/ResultExam.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/starting.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/starting.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/myapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/myapp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Models/Institution.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Models/Institution.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../config/fortify.php" beforeDir="false" afterPath="$PROJECT_DIR$/../config/fortify.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/migrations/2018_04_02_062605_create_general_settings_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/migrations/2018_04_02_062605_create_general_settings_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/migrations/2020_04_27_084132_create_institutions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/migrations/2020_04_27_084132_create_institutions_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/seeders/GeneralSettingSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/seeders/GeneralSettingSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/js/frontapp.js" beforeDir="false" afterPath="$PROJECT_DIR$/../public/js/frontapp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/Layouts/AppFronted.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/Layouts/AppFronted.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/Layouts/Frontend/DeskVue.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/Layouts/Frontend/DeskVue.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/Layouts/Frontend/FrontView/ViewOne.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/Layouts/Frontend/FrontView/ViewOne.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/Layouts/Frontend/FrontView/ViewSeven.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/Layouts/Frontend/FrontView/ViewSeven.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/Layouts/Frontend/FrontView/ViewSix.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/Layouts/Frontend/FrontView/ViewSix.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/Layouts/Frontend/FrontView/ViewTwo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/Layouts/SVGHelper/ViewTwo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/Pages/Fronted.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/Pages/Fronted.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/Pages/NotFound.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/Pages/NotFound.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/frontapp.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/frontapp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/../routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +100,18 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <bower-package value="" />
+    <bower.json value="" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -207,17 +249,18 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="MTCustomThemeConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Bulma\myapp\database\seeders\newSeed" />
-      <recent name="C:\xampp\htdocs\Bulma\myapp\database\seeders" />
-      <recent name="C:\xampp\htdocs\Bulma\myapp\resources\js\Pages\Hostels" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\Bulma\myapp\public\organization\images" />
       <recent name="C:\xampp\htdocs\Bulma\myapp\public\organization" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Bulma\myapp\resources\js\Layouts\SVGHelper" />
+      <recent name="C:\xampp\htdocs\Bulma\myapp\database\seeders\newSeed" />
+      <recent name="C:\xampp\htdocs\Bulma\myapp\database\seeders" />
+      <recent name="C:\xampp\htdocs\Bulma\myapp\resources\js\Pages\Hostels" />
     </key>
   </component>
   <component name="RunManager">
@@ -307,30 +350,47 @@
       <workItem from="1616522261019" duration="187000" />
       <workItem from="1616522486273" duration="22947000" />
       <workItem from="1616622342129" duration="183000" />
-      <workItem from="1616622534268" duration="4454000" />
+      <workItem from="1616622534268" duration="5374000" />
+      <workItem from="1616654929217" duration="298000" />
+      <workItem from="1616655502979" duration="319000" />
+      <workItem from="1616656220817" duration="190000" />
+      <workItem from="1616656718194" duration="1227000" />
+      <workItem from="1616662906256" duration="18969000" />
+      <workItem from="1616688647407" duration="6428000" />
+      <workItem from="1616754112560" duration="18074000" />
+      <workItem from="1617792971244" duration="224000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+  </component>
   <component name="WindowStateProjectService">
+    <state x="275" y="23" key="#Notifications" timestamp="1616656252668">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="23" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1616656252668" />
     <state x="395" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1611919149051">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="395" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1611919149051" />
-    <state x="413" y="120" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1613824031728">
+    <state x="413" y="120" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1616782789457">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="120" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1613824031728" />
+    <state x="413" y="120" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1616782789457" />
     <state x="398" y="227" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1613573217569">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="398" y="227" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728@0.0.1366.728" timestamp="1613573217569" />
-    <state x="425" y="165" key="FileChooserDialogImpl" timestamp="1616622529501">
+    <state x="425" y="165" key="FileChooserDialogImpl" timestamp="1616656398342">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="425" y="165" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1616622529501" />
+    <state x="425" y="165" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1616656398342" />
     <state x="438" y="179" key="NewPhpClassDialog" timestamp="1613823938316">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -339,18 +399,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="517" y="288" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1611906580243" />
-    <state x="147" y="15" key="SettingsEditor" timestamp="1616622512401">
+    <state x="70" y="20" width="998" height="708" key="SettingsEditor" timestamp="1617793238979">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="147" y="15" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1616622512401" />
+    <state x="70" y="20" width="998" height="708" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1617793238979" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1613827325016">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1613827325016" />
-    <state x="6" y="182" key="com.intellij.ide.util.TipDialog" timestamp="1616622440186">
+    <state x="6" y="182" key="com.intellij.ide.util.TipDialog" timestamp="1617792999420">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="6" y="182" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1616622440186" />
+    <state x="6" y="182" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1617792999420" />
     <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1614364805279">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -359,9 +419,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1612189123425" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1616626460087">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1616765181007">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1616626460087" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1616765181007" />
   </component>
 </project>

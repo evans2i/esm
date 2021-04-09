@@ -10,17 +10,19 @@ import VModal from 'vue-js-modal';
 import {Form, HasError, AlertError} from 'vform';
 import VueProgressBar from 'vue-progressbar';
 import moment from 'moment';
+import Swal from 'sweetalert2';
 
 window.Form = Form;
 window.moment = require('moment');
 window.appBus = new appBus;
 window.cash = require('cash-dom');
+window.Swal = Swal;
 
 Vue.use(VueProgressBar, {
     color: 'rgb(11, 172, 11)',
     failedcolor: 'red',
     height: '4px'
-})
+});
 
 Vue.use(InertiaApp);
 Vue.use(InertiaForm);
@@ -36,7 +38,6 @@ Vue.filter('upText', function (text) {
 Vue.filter('myDateDate', function (created) { return moment(created).format('DD MMMM YYYY');});
 
 const app = document.getElementById('app');
-console.log(app)
 new Vue({
     render: (h) =>
         h(InertiaApp, {

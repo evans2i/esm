@@ -31,10 +31,6 @@
                 type: Object,
                 required: true,
             },
-            urls:{
-                type:String,
-                required:true,
-            }
         },
     }
 </script>

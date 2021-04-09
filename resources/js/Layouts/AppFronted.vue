@@ -14,17 +14,17 @@
                     </button>
                 </div>
             </div>
-            <mobile-vue></mobile-vue>
+            <mobile-vue/>
         </div>
         <!--Nav-->
         <nav class="headering w-full fixed top-nav top-0 text-white">
-            <desk-vue></desk-vue>
+            <desk-vue/>
             <hr class="border-b border-gray-100 opacity-25 my-0 py-0 pr-4" />
         </nav>
 
             <slot></slot>
             <!--Footer-->
-        <footer-front :van="van"></footer-front>
+        <footer-front :van="van"/>
 
     </div>
 </template>
@@ -49,6 +49,7 @@
             axios.get(`/generalSetting`)
                  .then((data)=>{
                     this.van = data.data;
+                    appBus.fire('generalsetting',data.data)
                  }).catch((e)=>{ this.error = e.message; });
         },
 

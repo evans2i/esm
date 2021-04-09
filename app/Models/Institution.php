@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Institution extends Model
 {
     use SoftDeletes;
-	// protected $guarded = ['id'];
-    //
+    protected $guarded = ['id'];
+
 }

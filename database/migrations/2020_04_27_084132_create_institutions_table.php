@@ -15,6 +15,9 @@ class CreateInstitutionsTable extends Migration
     {
         Schema::create('institutions', function (Blueprint $table) {
             $table->id('id');
+            $table->string('name');
+            $table->string('email');
+            $table->string('note');
             $table->unsignedBigInteger('created_by')->nullable();
             $table->unsignedBigInteger('last_updated_by')->nullable();
             $table->timestamps();

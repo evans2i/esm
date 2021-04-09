@@ -15,18 +15,18 @@ use Illuminate\Support\Facades\Route;
 
  Route::get('/', '\App\Http\Controllers\Manage\GeneralSettingController@welcome' );
  Route::get('/not-found', function () { return Inertia\Inertia::render('NotFound');});
- Route::get('/contact', function () { return Inertia\Inertia::render('NotFound');});
- Route::get('/about-us', function () { return Inertia\Inertia::render('NotFound');});
+ Route::get('/contact', function () { return Inertia\Inertia::render('Frontend/Contact');});
+ Route::get('/about-us', function () { return Inertia\Inertia::render('Frontend/AboutUs');});
 
-//     function () {
-////     return view('fronting');
-//     return Inertia\Inertia::render('Fronted');
-// };
-//Route::get('/', function () {
-//    return view('auth.login');
-//});
+    Route::group(['prefix' => 'institute'], function() {
+        Route::post('/contact', '\App\Http\Controllers\Manage\InstituteContoller@contacts');
+        Route::get('/all-event', '\App\Http\Controllers\Manage\InstituteContoller@allEvent');
+        Route::get('/exam-event', '\App\Http\Controllers\Manage\InstituteContoller@examEvent');
+        Route::get('/meeting-event', '\App\Http\Controllers\Manage\InstituteContoller@meeting');
+    });
 
-Route::apiresource('/generalSetting', '\App\Http\Controllers\Manage\GeneralSettingController' );
+Route::get('/register', function () {return redirect('/login');});
+Route::apiresource('/generalSetting', '\App\Http\Controllers\Manage\GeneralSettingController');
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', '\App\Http\Controllers\DashboardController@dashboard')->name('dashboard');
 
 
@@ -102,8 +102,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', '\App\Http\Co
             Route::get('/getStudentResult', '\App\Http\Controllers\Student\CurrentStudentController@getStudentResult');
             Route::get('/getStudentExamination', '\App\Http\Controllers\Student\CurrentStudentController@getStudentExamination');
             Route::get('/getExaminFacultySemister/{facId}/{semId}', '\App\Http\Controllers\Student\CurrentStudentController@getExaminFacultySemister');
-
-
         });
 
         Route::group(['prefix' => 'accountant'], function() {

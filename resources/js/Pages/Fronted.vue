@@ -11,7 +11,7 @@
 <script>
     import AppFronted from '@/Layouts/AppFronted'
     import ViewOne from '@/Layouts/Frontend/FrontView/ViewOne'
-    import ViewTwo from '@/Layouts/Frontend/FrontView/ViewTwo'
+    import ViewTwo from '@/Layouts/SVGHelper/ViewTwo'
     import ViewThree from '@/Layouts/Frontend/FrontView/ViewThree'
 
     export default {

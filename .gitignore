@@ -1,5 +1,6 @@
 /node_modules
 /.idea
+/app/.idea
 /public/hot
 /public/storage
 /public/Datatables

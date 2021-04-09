@@ -17,12 +17,21 @@ class CreateGeneralSettingsTable extends Migration
             $table->id('id');
             $table->string('institute', '100');
             $table->string('salogan', '100')->nullable();
+            $table->string('moto', '100')->nullable();
+            $table->string('about', '500')->nullable();
+            $table->string('mission', '500')->nullable();
+            $table->string('vision', '500')->nullable();
+            $table->string('owner')->nullable();
+            $table->string('location')->nullable();
+            $table->string('lat')->nullable();
+            $table->string('long')->nullable();
             $table->text('copyright')->nullable();
             $table->text('address')->nullable();
             $table->string('phone', '100')->nullable();
             $table->string('email', '100')->nullable();
             $table->string('website', '100')->nullable();
-
+            $table->enum('ownership',['private','government',])->default('private')->nullable();
+            $table->enum('type',['kindergarten','pre-primary','primary','secondary','college','university'])->default('secondary')->nullable();
             //Images
             $table->text('favicon')->nullable();
             $table->text('logo')->nullable();

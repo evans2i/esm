@@ -4,7 +4,7 @@
             <div class="px-3 items-center flex justify-center">
                 <!--Left Col-->
                 <div class="page404 justify-self-center">
-                  <img class="mx-auto" src="/dist/images//404.png">
+                  <img class="mx-auto" src="/dist/images/404.png">
                     <h2 class="my-4 text-3xl font-medium  text-gray-400 leading-tight">Page not found</h2>
                     <p class="my-6 text-xl font-medium  text-gray-900">I'm Sorry..... ! Seems You are Looking for Something I dont have..</p>
 
@@ -15,13 +15,13 @@
                 </div>
             </div>
         </div>
-        <ViewTwo></ViewTwo>
+        <ViewTwo/>
     </app-fronted>
 </template>
 
 <script>
     import AppFronted from "@/Layouts/AppFronted";
-    import ViewTwo from '@/Layouts/Frontend/FrontView/ViewTwo'
+    import ViewTwo from '@/Layouts/SVGHelper/ViewTwo'
 
     export default {
         name: "NotFound",

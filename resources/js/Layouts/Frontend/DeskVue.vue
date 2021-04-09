@@ -1,20 +1,17 @@
 <template>
-    <ul  class="headering w-full  justify-end flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0  lg:bg-transparent text-black p-4 lg:p-0 z-20">
+    <ul  class="headering w-full justify-end  flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0  lg:bg-transparent text-black p-4 lg:p-0 z-20">
         <li>
             <a href="javascript:;" class="top-menu">
                 <div class="top-menu__icon"> <i class="feather icon-book"></i> </div>
                 <div class="top-menu__title"> Accademic <i class="feather icon-chevron-down top-menu__sub-icon" ></i> </div>
             </a>
-            <ul class="">
-                <li>
-                    <inertia-link href="#"  class="top-menu" >
-                        <div class="top-menu__icon"> <i class="feather icon-head"></i></div>
-                        <div class="top-menu__title">Assignments</div>
-                    </inertia-link>
+            <ul>
+                <li class="text-center">
+                    <h2 class="top-menu text-center text-3xl mt-5 top-menu__title">Accademic</h2>
                 </li>
 
                 <li>
-                    <inertia-link href="#"  class="top-menu" >
+                    <inertia-link href="#"  class="top-menu " >
                         <div class="top-menu__icon"> <i class="feather icon-clock"></i> </div>
                         <div class="top-menu__title">Assign Faculty/Class</div>
                     </inertia-link>
@@ -32,25 +29,6 @@
                         <div class="top-menu__title">Examination Schedule</div>
                     </inertia-link>
                 </li>
-                <li>
-                    <inertia-link href="#"  class="top-menu" >
-                        <div class="top-menu__icon"> <i class="feather icon-user"></i></div>
-                        <div class="top-menu__title">Examination Results</div>
-                    </inertia-link>
-                </li>
-                <li>
-                    <inertia-link href="#"  class="top-menu" >
-                        <div class="top-menu__icon"> <i class="feather icon-user"></i></div>
-                        <div class="top-menu__title"> Examination Types</div>
-                    </inertia-link>
-                </li>
-                <li>
-                    <inertia-link href="#"  class="top-menu" >
-                        <div class="top-menu__icon"> <i class="feather icon-user"></i></div>
-                        <div class="top-menu__title"> Result Examination </div>
-                    </inertia-link>
-                </li>
-
             </ul>
         </li>
         <li>
@@ -59,11 +37,8 @@
                 <div class="top-menu__title"> Library <i class="feather icon-chevron-down top-menu__sub-icon" ></i> </div>
             </a>
             <ul class="">
-                <li>
-                    <inertia-link href="#"  class="top-menu" >
-                        <div class="top-menu__icon"> <i class="feather icon-user"></i></div>
-                        <div class="top-menu__title">Students</div>
-                    </inertia-link>
+                <li class="text-center">
+                    <h2 class="top-menu text-center text-3xl mt-5 top-menu__title">Library</h2>
                 </li>
                 <li>
                     <inertia-link href="#"  class="top-menu" >
@@ -101,6 +76,9 @@
                 <div class="top-menu__title"> Events <i class="feather icon-chevron-down top-menu__sub-icon" ></i> </div>
             </a>
             <ul class="">
+                <li class="text-center">
+                    <h2 class="top-menu text-center text-3xl mt-5 top-menu__title">Events</h2>
+                </li>
                 <li>
                     <inertia-link href="#"  class="top-menu" >
                         <div class="top-menu__icon"> <i class="feather icon-user"></i></div>
