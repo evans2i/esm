@@ -2,83 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="346f7753-0686-4005-9bb5-7aeb49229b49" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/myapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/myapp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Models/Institution.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Models/Institution.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../config/fortify.php" beforeDir="false" afterPath="$PROJECT_DIR$/../config/fortify.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../database/migrations/2018_04_02_062605_create_general_settings_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/migrations/2018_04_02_062605_create_general_settings_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../database/migrations/2020_04_27_084132_create_institutions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/migrations/2020_04_27_084132_create_institutions_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../database/seeders/GeneralSettingSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/seeders/GeneralSettingSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/food-beverage-9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/preview-9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/dist/images/profile-9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/js/frontapp.js" beforeDir="false" afterPath="$PROJECT_DIR$/../public/js/frontapp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/Layouts/AppFronted.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/Layouts/AppFronted.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/Layouts/Frontend/DeskVue.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/Layouts/Frontend/DeskVue.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/Layouts/Frontend/FrontView/ViewOne.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/Layouts/Frontend/FrontView/ViewOne.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/Layouts/Frontend/FrontView/ViewSeven.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/Layouts/Frontend/FrontView/ViewSeven.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/Layouts/Frontend/FrontView/ViewSix.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/Layouts/Frontend/FrontView/ViewSix.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/Layouts/Frontend/FrontView/ViewTwo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/Layouts/SVGHelper/ViewTwo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/Pages/Fronted.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/Pages/Fronted.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/Pages/NotFound.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/Pages/NotFound.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/frontapp.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/frontapp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/../routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/myapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/myapp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/frontapp.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/frontapp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Layouts/Frontend/FrontView/ViewOne.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Layouts/Frontend/FrontView/ViewOne.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Layouts/Frontend/MobileVue.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Layouts/Frontend/MobileVue.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Frontend/Components/ContactPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Frontend/Components/ContactPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Frontend/Contact.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Frontend/Contact.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/NotFound.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/NotFound.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +33,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsBowerSettings">
     <node-interpreter value="project" />
@@ -359,6 +292,11 @@
       <workItem from="1616688647407" duration="6428000" />
       <workItem from="1616754112560" duration="18074000" />
       <workItem from="1617792971244" duration="224000" />
+      <workItem from="1617956019951" duration="746000" />
+      <workItem from="1617958438278" duration="3089000" />
+      <workItem from="1618435243883" duration="612000" />
+      <workItem from="1618563991995" duration="231000" />
+      <workItem from="1619622053726" duration="4610000" />
     </task>
     <servers />
   </component>
@@ -387,10 +325,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="398" y="227" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728@0.0.1366.728" timestamp="1613573217569" />
-    <state x="425" y="165" key="FileChooserDialogImpl" timestamp="1616656398342">
+    <state x="485" y="213" key="FileChooserDialogImpl" timestamp="1617968285632">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="425" y="165" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1616656398342" />
+    <state x="485" y="213" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1617968285632" />
     <state x="438" y="179" key="NewPhpClassDialog" timestamp="1613823938316">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -399,18 +337,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="517" y="288" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1611906580243" />
-    <state x="70" y="20" width="998" height="708" key="SettingsEditor" timestamp="1617793238979">
+    <state x="-393" y="20" width="998" height="708" key="SettingsEditor" timestamp="1617966793154">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="70" y="20" width="998" height="708" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1617793238979" />
+    <state x="-393" y="20" width="998" height="708" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1617966793154" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1613827325016">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1613827325016" />
-    <state x="6" y="182" key="com.intellij.ide.util.TipDialog" timestamp="1617792999420">
+    <state x="6" y="182" key="com.intellij.ide.util.TipDialog" timestamp="1618564220483">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="6" y="182" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1617792999420" />
+    <state x="6" y="182" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1618564220483" />
     <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1614364805279">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -419,9 +357,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1612189123425" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1616765181007">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1619622960662">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1616765181007" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1619622960662" />
   </component>
 </project>

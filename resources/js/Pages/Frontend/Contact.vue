@@ -1,6 +1,6 @@
 <template>
     <app-fronted>
-        <contact-page :van="van"/>
+        <contact-page  :van="van"/>
         <ViewThree/>
         <ViewTwo/>
     </app-fronted>

@@ -1,49 +1,45 @@
 <template>
 
-            <div class="border-b pt-20">
-
-                <div class="border-b pt-20 mx-auto flex flex-wrap pb-0 max-w-screen-xl grid gap-8 grid-cols-1 md:grid-cols-2 bg-gray-100 text-gray-900 shadow-lg">
-                    <div class="flex flex-col justify-between">
-                        <div>
-                            <h2 class="text-2xl lg:text-3xl text-center font-bold leading-tight">Lets Discuss about everything!</h2>
-                            <div class="text-gray-700 w-full text-center mt-8 text-xl">
-                                Send us an <span class="underline"> <a :href="`mailto:${van.email}`">Email</a> </span> instead.
-                            </div>
-
-                            <h3 class="text-2xl ml-5 lg:text-xl text-start font-medium pt-2 leading-tight" >Phone :{{van.phone}} </h3>
-                            <h3 class="text-2xl ml-5 lg:text-xl text-start font-medium pt-2 leading-tight" >email :{{van.email}} </h3>
-                            <h3 class="text-2xl ml-5 lg:text-xl text-start font-medium pt-2 leading-tight" >Whatsapp :{{van.whatsapp}} </h3>
-                            <h3 class="text-2xl ml-5 lg:text-xl text-start font-medium pt-2 leading-tight" >Address :{{van.address}} </h3>
-                        </div>
-                        <div class="text-center flex">
-                            <FullContact/>
-                        </div>
-                    </div>
-                    <div class="">
-                        <div>
-                            <span class="uppercase text-sm text-gray-600 font-bold">Full Name</span>
-                            <input v-model="form.name" class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" placeholder="" required>
-                        </div>
-                        <div class="mt-8">
-                            <span class="uppercase text-sm text-gray-600 font-bold">Email</span>
-                            <input id="contactemail" @blur="validateEmail" v-model="form.email" class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" required>
-                        </div>
-                        <div class="mt-8">
-                            <span class="uppercase text-sm text-gray-600 font-bold">Message</span>
-                            <textarea v-model="form.note" class="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" required></textarea>
-                        </div>
-                        <div class="mt-8">
-                            <button :disabled="isDisabled" @click="submitContact" class="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
-                                Send Message
-                            </button>
-                        </div>
-                    </div>
+<div class=" pt-20">
+    <section class="bg-white border-b border-b pt-20 grid grid-cols-1 md:grid-cols-2  ">
+        <div class="flex flex-col justify-between">
+            <div>
+                <h2 class="text-2xl lg:text-3xl text-center font-bold leading-tight">Lets Discuss about everything!</h2>
+                <div class="text-gray-700 w-full text-center mt-8 text-xl">
+                    Send us an <span class="underline"> <a :href="`mailto:${van.email}`">Email</a> </span> instead.
                 </div>
+
+                <h3 class="text-2xl ml-5 lg:text-xl text-start font-medium pt-2 leading-tight" >Phone :{{van.phone}} </h3>
+                <h3 class="text-2xl ml-5 lg:text-xl text-start font-medium pt-2 leading-tight" >email :{{van.email}} </h3>
+                <h3 class="text-2xl ml-5 lg:text-xl text-start font-medium pt-2 leading-tight" >Whatsapp :{{van.whatsapp}} </h3>
+                <h3 class="text-2xl ml-5 lg:text-xl text-start font-medium pt-2 leading-tight" >Address :{{van.address}} </h3>
             </div>
+            <div class="text-center flex">
+                <FullContact/>
+            </div>
+        </div>
+        <div class="px-6">
+            <div>
+                <span class="uppercase text-sm text-gray-600 font-bold">Full Name</span>
+                <input v-model="form.name" class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" placeholder="" required>
+            </div>
+            <div class="mt-8">
+                <span class="uppercase text-sm text-gray-600 font-bold">Email</span>
+                <input id="contactemail" @blur="validateEmail" v-model="form.email" class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" required>
+            </div>
+            <div class="mt-8">
+                <span class="uppercase text-sm text-gray-600 font-bold">Message</span>
+                <textarea v-model="form.note" class="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" required></textarea>
+            </div>
+            <div class="mt-8">
+                <button :disabled="isDisabled" @click="submitContact" class="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
+                    Send Message
+                </button>
+            </div>
+        </div>
 
-
-
-
+    </section>
+</div>
 
 </template>
 

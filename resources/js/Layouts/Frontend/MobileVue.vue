@@ -1,30 +1,30 @@
 <template>
     <ul class="border-t border-theme-24 py-5 hidden" style="display: none;">
         <li>
-            <inertia-link href="/dashboard"  class="menu menu--active" >
+            <inertia-link href="/"  class="menu menu--active" >
                 <div class="menu__icon"> <i class="feather icon-home"></i> </div>
-                <div class="menu__title"> Dashboard </div>
+                <div class="menu__title"> Home </div>
             </inertia-link>
         </li>
         <li>
-            <inertia-link href="/accountant/quickReceiveFee"  class="menu" >
-                <div class="menu__title">Quick Receive Fee</div>
+            <inertia-link href="/not-found"  class="menu" >
+                <div class="menu__title">Not Found</div>
             </inertia-link>
         </li>
         <li>
-            <inertia-link href="/accountant/feeCollections"  class="menu" >
-                <div class="menu__title">Collect Fee</div>
+            <inertia-link href="/about-us"  class="menu" >
+                <div class="menu__title">About Us</div>
             </inertia-link>
         </li>
         <li>
-            <inertia-link href="/accountant/feeMasters"  class="menu" >
-                <div class="menu__title">Heloo</div>
+            <inertia-link href="/contact"  class="menu" >
+                <div class="menu__title">Contact</div>
             </inertia-link>
         </li>
         <li >
-            <inertia-link href="/login"  class="menu" >
+            <a href="/login"  class="menu" >
                 <div class="menu__title">Login</div>
-            </inertia-link>
+            </a>
         </li>
 
 
